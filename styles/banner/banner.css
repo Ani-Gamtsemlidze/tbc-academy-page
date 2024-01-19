@@ -1,0 +1,30 @@
+@font-face {
+  font-display: block;
+  font-family: banner_font;
+  src: url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/ttf/file.ttf") format("ttf");
+}
+.main_container {
+  padding-top: 6%;
+}
+
+.banner_container {
+  background: url(../../assets/images/banner.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 352px;
+  padding-left: 50px;
+}
+.banner_container h3 {
+  font-size: 42px;
+  color: rgb(244, 244, 244);
+  font-family: banner_font;
+  margin-bottom: 20px;
+}
+.banner_container span {
+  font-size: 34px;
+  color: rgb(244, 244, 244);
+  font-family: banner_font;
+}/*# sourceMappingURL=banner.css.map */

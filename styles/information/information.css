@@ -1,0 +1,19 @@
+@font-face {
+  font-display: block;
+  font-family: wf_dd28b3957391427eb54de1c9e;
+  src: url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/ttf/file.ttf") format("ttf");
+}
+.information_container {
+  background-color: #2b2b2b;
+  width: 100%;
+}
+
+.info_box {
+  width: 958px;
+  margin: 0 auto;
+}
+.info_box p {
+  color: #f4f4f4;
+  font-size: 28px;
+  font-family: wf_dd28b3957391427eb54de1c9e;
+}/*# sourceMappingURL=information.css.map */
