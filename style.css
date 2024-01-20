@@ -2,6 +2,7 @@
 @import url(styles/banner/banner.css);
 @import url(styles/information/information.css);
 @import url(styles/courses/courses.css);
+@import url(styles/questions/questions.css);
 @font-face {
   font-display: block;
   font-family: main_font;
