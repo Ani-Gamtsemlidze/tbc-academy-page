@@ -1,23 +1,43 @@
+@font-face {
+  font-display: block;
+  font-family: wf_dd28b3957391427eb54de1c9e;
+  src: url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff2/file.woff2")
+      format("woff2"),
+    url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff/file.woff")
+      format("woff"),
+    url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/ttf/file.ttf")
+      format("ttf");
+}
+
 .learning_courses {
   background-color: rgb(22, 22, 22);
-  h2 {
-    color: #dbdbdb;
+  .section_title {
+    padding: 34px 0 67px;
+    h2 {
+      color: #dbdbdb;
+      font-size: 24px;
+      font-family: wf_dd28b3957391427eb54de1c9e;
+      font-weight: 300;
+    }
   }
 }
 
 .courses_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 58px;
 }
 .course_box {
   border: 1px solid rgb(85, 85, 85);
   border-radius: 6px;
   width: 300px;
-  //   margin: 0 30px;
-  margin: 20px 0 15px;
+  height: 414px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 13px 12px;
   .course_img {
-    // width: 300px;
     height: 150px;
     img {
       width: 100%;
@@ -27,14 +47,21 @@
       object-fit: cover;
     }
   }
-  .course_text {
-    margin: 20px;
+  .course_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 20px 10px 20px 20px;
   }
   .text {
     color: #f4f4f4;
+    font-family: wf_dd28b3957391427eb54de1c9e;
   }
   .course_title {
     font-size: 18px;
+    font-family: wf_dd28b3957391427eb54de1c9e;
+    font-weight: 400;
   }
   .registration_status {
     font-size: 14px;
@@ -44,7 +71,6 @@
   .course_info {
     display: flex;
     align-items: center;
-    padding: 80px 25px 0;
     img {
       width: 17px;
       height: 16px;

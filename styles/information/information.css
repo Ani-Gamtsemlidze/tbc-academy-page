@@ -12,12 +12,14 @@
   color: #00aef3;
   font-size: 20px;
   display: inline-block;
-  margin-top: 30px;
+  margin: 43px 0 57px;
+  transition: 0.4s;
+}
+.information_container .read_more_link:hover {
+  color: rgb(170, 170, 170);
 }
 .information_container .info_box {
-  width: 958px;
-  margin: 0 auto;
-  padding: 50px 0 50px;
+  padding-top: 56px;
 }
 .information_container .info_box p {
   color: #f4f4f4;

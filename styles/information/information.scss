@@ -18,12 +18,15 @@
     color: #00aef3;
     font-size: 20px;
     display: inline-block;
-    margin-top: 30px;
+    margin: 43px 0 57px;
+    transition: 0.4s;
+    &:hover {
+      color: rgb(170, 170, 170);
+    }
   }
   .info_box {
-    width: 958px;
-    margin: 0 auto;
-    padding: 50px 0 50px;
+    padding-top: 56px;
+
     p {
       color: #f4f4f4;
       font-size: 28px;

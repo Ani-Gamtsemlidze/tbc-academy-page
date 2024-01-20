@@ -1,7 +1,6 @@
 .site_header {
   display: flex;
   background-color: rgb(43, 43, 43);
-  padding: 20px 100px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -9,6 +8,12 @@
   position: fixed;
   top: 0;
   left: 0;
+}
+.site_header .header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 .menu_list {

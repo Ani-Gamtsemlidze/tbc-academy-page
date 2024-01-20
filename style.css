@@ -12,4 +12,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: main_font;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
