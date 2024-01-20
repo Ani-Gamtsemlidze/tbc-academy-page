@@ -12,10 +12,16 @@
 .information_container {
   background-color: #2b2b2b;
   width: 100%;
+  a {
+    text-decoration: none;
+    color: #00aef3;
+    font-size: 20px;
+  }
 }
 .info_box {
   width: 958px;
   margin: 0 auto;
+  padding: 30px;
 
   p {
     color: #f4f4f4;
