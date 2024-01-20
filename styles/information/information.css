@@ -7,18 +7,19 @@
   background-color: #2b2b2b;
   width: 100%;
 }
-.information_container a {
+.information_container .read_more_link {
   text-decoration: none;
   color: #00aef3;
   font-size: 20px;
+  display: inline-block;
+  margin-top: 30px;
 }
-
-.info_box {
+.information_container .info_box {
   width: 958px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 50px 0 50px;
 }
-.info_box p {
+.information_container .info_box p {
   color: #f4f4f4;
   font-size: 28px;
   font-family: wf_dd28b3957391427eb54de1c9e;

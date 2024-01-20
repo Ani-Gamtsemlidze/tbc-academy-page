@@ -1,19 +1,15 @@
 @import url(styles/header/header.css);
 @import url(styles/banner/banner.css);
 @import url(styles/information/information.css);
+@import url(styles/courses/courses.css);
 @font-face {
   font-display: block;
   font-family: main_font;
-  src: url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff2/file.woff2")
-      format("woff2"),
-    url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff/file.woff")
-      format("woff"),
-    url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/ttf/file.ttf")
-      format("ttf");
+  src: url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/ttf/file.ttf") format("ttf");
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: main_font;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
