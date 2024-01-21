@@ -2,6 +2,8 @@
   background-color: rgb(22, 22, 22);
   color: #fff;
   width: 100%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   display: flex;
 }
 .faq_section .container_faq {
@@ -34,6 +36,7 @@
   color: #aaaaaa;
 }
 .faq_section .faq_list .faq_item {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -68,11 +71,14 @@
   cursor: pointer;
 }
 .faq_section .faq_list .faq_item .faq_answer {
-  padding: 20px 0 6px;
-  display: none;
+  padding: 0;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
 }
 .faq_section .faq_list .faq_item .faq_answer.visible {
-  display: block;
+  height: auto;
+  padding: 20px 0 6px;
 }
 .faq_section .faq_list .faq_item .faq_answer p {
   font-size: 16px;

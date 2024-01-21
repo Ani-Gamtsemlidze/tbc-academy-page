@@ -1,16 +1,36 @@
-function questions() {
+export const questions = () => {
   const questionItems = document.querySelectorAll(".faq_item");
-  const answerItems = document.querySelectorAll(".faq_answer");
 
-  for (const [index, question] of questionItems.entries()) {
-    question.addEventListener("click", () => {
-      question.classList.toggle("active");
+  for (const question of questionItems) {
+    question.addEventListener("click", function () {
+      this.classList.toggle("active");
 
-      if (answerItems[index]) {
-        answerItems[index].classList.toggle("visible");
+      const answer = this.querySelector(".faq_answer");
+
+      if (!answer.classList.contains("visible")) {
+        answer.classList.add("visible");
+        answer.style.height = "auto";
+
+        const height = answer.clientHeight + "px";
+
+        answer.style.height = "0px";
+
+        setTimeout(() => {
+          answer.style.height = height;
+        }, 0);
+      } else {
+        answer.style.height = "0px";
+
+        answer.addEventListener(
+          "transitionend",
+          function () {
+            answer.classList.remove("visible");
+          },
+          {
+            once: true,
+          }
+        );
       }
     });
   }
-}
-
-export { questions };
+};

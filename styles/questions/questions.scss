@@ -2,6 +2,7 @@
   background-color: rgb(22, 22, 22);
   color: #fff;
   width: 100%;
+  min-height: fit-content;
   display: flex;
   .container_faq {
     max-width: 980px;
@@ -34,6 +35,7 @@
   }
   .faq_list {
     .faq_item {
+      cursor: pointer;
       display: flex;
       justify-content: space-between;
       position: relative;
@@ -69,11 +71,14 @@
         cursor: pointer;
       }
       .faq_answer {
-        padding: 20px 0 6px;
-        display: none;
+        padding: 0;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s ease;
 
         &.visible {
-          display: block;
+          height: auto;
+          padding: 20px 0 6px;
         }
         p {
           font-size: 16px;
