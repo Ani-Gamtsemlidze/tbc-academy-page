@@ -42,17 +42,10 @@
   position: relative;
   flex-direction: column;
   padding: 24px 0;
+  border-bottom: 1px solid #353131;
 }
 .faq_section .faq_list .faq_item.active img {
   transform: rotate(180deg);
-}
-.faq_section .faq_list .faq_item::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #353131;
-  position: absolute;
-  bottom: 0;
 }
 .faq_section .faq_list .faq_item .faq_question {
   display: flex;

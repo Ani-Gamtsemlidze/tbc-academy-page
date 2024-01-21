@@ -1,0 +1,56 @@
+.site_footer {
+  background-color: #1a1e1f;
+  padding: 50px 0;
+}
+.site_footer .footer_logos_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site_footer .footer_logos_container .tbc_logo {
+  width: 106px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.site_footer .footer_logos_container .facebook_logo {
+  margin-right: 7px;
+}
+.site_footer .footer_logos_container .social_media_logos img {
+  width: 39px;
+  height: 39px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.site_footer .footer_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.site_footer .footer_text .copyright_terms_box p {
+  color: #fff;
+  font-size: 14px;
+}
+.site_footer .footer_text a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.4s;
+}
+.site_footer .footer_text .terms_link {
+  margin-top: 20px;
+}
+.site_footer .footer_text .terms_link:hover a {
+  color: #aaaaaa;
+}
+.site_footer .footer_text .contact_link {
+  border-radius: 5px;
+  padding: 7px 30px;
+  background-color: #00aef3;
+  transition: 0.4s;
+}
+.site_footer .footer_text .contact_link:hover {
+  background-color: #d5d5d5;
+  color: #353131;
+}/*# sourceMappingURL=footer.css.map */

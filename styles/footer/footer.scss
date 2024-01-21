@@ -1,0 +1,60 @@
+.site_footer {
+  background-color: #1a1e1f;
+  padding: 50px 0;
+
+  .footer_logos_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .tbc_logo {
+      width: 106px;
+      height: 30px;
+      object-fit: cover;
+    }
+    .facebook_logo {
+      margin-right: 7px;
+    }
+    .social_media_logos img {
+      width: 39px;
+      height: 39px;
+      object-fit: cover;
+    }
+  }
+  .footer_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    .copyright_terms_box {
+      p {
+        color: #fff;
+        font-size: 14px;
+      }
+      //   span {
+      //     color: #fff;
+      //   }
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.4s;
+    }
+    .terms_link {
+      margin-top: 20px;
+      &:hover a {
+        color: #aaaaaa;
+      }
+    }
+    .contact_link {
+      border-radius: 5px;
+      padding: 7px 30px;
+      background-color: #00aef3;
+      transition: 0.4s;
+      &:hover {
+        background-color: #d5d5d5;
+        color: #353131;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@
 @import url(styles/information/information.css);
 @import url(styles/courses/courses.css);
 @import url(styles/questions/questions.css);
+@import url(styles/footer/footer.css);
 @font-face {
   font-display: block;
   font-family: wf_dd28b3957391427eb54de1c9e;
