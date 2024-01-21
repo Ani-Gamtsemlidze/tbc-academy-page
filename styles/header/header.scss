@@ -1,34 +1,47 @@
-.site_header {
+.site-header {
   display: flex;
-  background-color: rgb(43, 43, 43);
+  background-color: #1a1e1f;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  transition: 0.4s;
+  transition: background-color 0.4s, width 0.4s;
   position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
-  .header_container {
+
+  .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    max-width: 980px;
+    width: 100%;
+    margin: 22px auto;
+
+    .tbc-academy-logo img {
+      width: 182px;
+      height: 40px;
+      object-fit: cover;
+    }
   }
 }
 
-.menu_list {
+.menu-list {
   display: flex;
   list-style: none;
   align-items: center;
-  li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 15px;
-    transition: 0.4s;
-    &:hover {
-      color: #00a3e0;
+
+  li {
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 15px;
+      transition: color 0.4s;
+
+      &:hover {
+        color: #00a3e0;
+      }
     }
   }
 }

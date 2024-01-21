@@ -1,9 +1,12 @@
 .site-footer {
   background-color: #1a1e1f;
-  padding: 50px 0;
+  display: flex;
+  //   padding: 64px 0 27px;
+
   .footer-logos-container {
     display: flex;
-    align-items: center;
+    margin: 64px 0 27px;
+    // align-items: center;
     justify-content: space-between;
     .tbc-logo {
       width: 106px;
@@ -26,30 +29,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
     .copyright-terms-box {
       .copyright-box span {
         color: #fff;
+        font-size: 14px;
       }
       a {
         text-decoration: none;
         cursor: pointer;
         color: #fff;
         transition: 0.4s;
+        font-size: 14px;
       }
       .terms-link {
-        margin-top: 20px;
         display: inline-block;
+        margin: 15px 0 43px;
+
         &:hover {
           color: #aaaaaa;
         }
       }
     }
     .contact-link {
-      border-radius: 5px;
+      border-radius: 6px;
       text-decoration: none;
       color: #fff;
       padding: 7px 30px;
+      margin: 0 0 30px;
       background-color: #00aef3;
       transition: 0.4s;
       &:hover {
