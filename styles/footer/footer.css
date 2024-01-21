@@ -1,56 +1,61 @@
-.site_footer {
+.site-footer {
   background-color: #1a1e1f;
   padding: 50px 0;
 }
-.site_footer .footer_logos_container {
+.site-footer .footer-logos-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.site_footer .footer_logos_container .tbc_logo {
+.site-footer .footer-logos-container .tbc-logo {
   width: 106px;
   height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.site_footer .footer_logos_container .facebook_logo {
-  margin-right: 7px;
-}
-.site_footer .footer_logos_container .social_media_logos img {
+.site-footer .footer-logos-container .social-media-logos img {
   width: 39px;
   height: 39px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.site_footer .footer_text {
+.site-footer .footer-logos-container a {
+  text-decoration: none;
+}
+.site-footer .footer-logos-container .facebook-logo {
+  margin-right: 7px;
+}
+.site-footer .footer-text {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
 }
-.site_footer .footer_text .copyright_terms_box p {
+.site-footer .footer-text .copyright-terms-box .copyright-box span {
   color: #fff;
-  font-size: 14px;
 }
-.site_footer .footer_text a {
+.site-footer .footer-text .copyright-terms-box a {
   text-decoration: none;
   cursor: pointer;
   color: #fff;
   transition: 0.4s;
 }
-.site_footer .footer_text .terms_link {
+.site-footer .footer-text .copyright-terms-box .terms-link {
   margin-top: 20px;
+  display: inline-block;
 }
-.site_footer .footer_text .terms_link:hover a {
+.site-footer .footer-text .copyright-terms-box .terms-link:hover {
   color: #aaaaaa;
 }
-.site_footer .footer_text .contact_link {
+.site-footer .footer-text .contact-link {
   border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
   padding: 7px 30px;
   background-color: #00aef3;
   transition: 0.4s;
 }
-.site_footer .footer_text .contact_link:hover {
+.site-footer .footer-text .contact-link:hover {
   background-color: #d5d5d5;
   color: #353131;
 }/*# sourceMappingURL=footer.css.map */
