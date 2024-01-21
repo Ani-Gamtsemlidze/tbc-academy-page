@@ -1,6 +1,6 @@
 @font-face {
   font-display: block;
-  font-family: banner_font;
+  font-family: wf_f52303b2efea42e1b4aeed119;
   src: url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff2/file.woff2")
       format("woff2"),
     url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff/file.woff")
@@ -9,27 +9,31 @@
       format("ttf");
 }
 
+$base-font: wf_f52303b2efea42e1b4aeed119;
+$base-color: rgb(244, 244, 244);
+
 .main_container {
   padding-top: 82px;
-}
-.banner_container {
-  background: url(../../assets/images/banner.jpg) no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 352px;
-  // padding-left: 50px;
-  h3 {
-    font-size: 42px;
-    color: rgb(244, 244, 244);
-    font-family: banner_font;
-    margin-bottom: 20px;
-  }
-  span {
-    font-size: 34px;
-    color: rgb(244, 244, 244);
-    font-family: banner_font;
+  .banner_container {
+    background: url(../../assets/images/banner.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 352px;
+    .banner-title {
+      margin-bottom: 20px;
+      h3 {
+        color: $base-color;
+        font-family: $base-font;
+        font-size: 48px;
+      }
+    }
+    span {
+      font-size: 34px;
+      color: $base-color;
+      font-family: $base-font;
+    }
   }
 }
