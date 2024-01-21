@@ -1,28 +1,31 @@
 @font-face {
   font-display: block;
-  font-family: wf_dd28b3957391427eb54de1c9e;
-  src: url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/ttf/file.ttf") format("ttf");
+  font-family: wf_7737b5e7be24426aa35c9f431;
+  src: url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/ttf/file.ttf") format("ttf");
 }
-.information_container {
+.information-container {
   background-color: #2b2b2b;
   width: 100%;
+  display: flex;
 }
-.information_container .read_more_link {
+.information-container .course-description {
+  margin: 56px 0 0;
+}
+.information-container .course-description p {
+  color: #f4f4f4;
+  font-size: 28px;
+}
+.information-container .read-more-link {
   text-decoration: none;
-  color: #00aef3;
-  font-size: 20px;
   display: inline-block;
   margin: 43px 0 57px;
   transition: 0.4s;
 }
-.information_container .read_more_link:hover {
+.information-container .read-more-link span {
+  font-size: 20px;
+  color: #00aef3;
+  font-family: wf_7737b5e7be24426aa35c9f431;
+}
+.information-container .read-more-link:hover {
   color: #aaaaaa;
-}
-.information_container .info_box {
-  padding-top: 56px;
-}
-.information_container .info_box p {
-  color: #f4f4f4;
-  font-size: 28px;
-  font-family: wf_dd28b3957391427eb54de1c9e;
 }/*# sourceMappingURL=information.css.map */

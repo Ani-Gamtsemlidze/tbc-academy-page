@@ -3,10 +3,10 @@
   font-family: wf_f52303b2efea42e1b4aeed119;
   src: url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/ttf/file.ttf") format("ttf");
 }
-.main_container {
+.main-container {
   padding-top: 82px;
 }
-.main_container .banner_container {
+.main-container .banner-container {
   background: url(../../assets/images/banner.jpg) no-repeat;
   background-size: cover;
   display: flex;
@@ -15,15 +15,15 @@
   width: 100%;
   height: 352px;
 }
-.main_container .banner_container .banner-title {
+.main-container .banner-container .banner-title {
   margin-bottom: 20px;
 }
-.main_container .banner_container .banner-title h3 {
+.main-container .banner-container .banner-title h3 {
   color: rgb(244, 244, 244);
   font-family: wf_f52303b2efea42e1b4aeed119;
   font-size: 48px;
 }
-.main_container .banner_container span {
+.main-container .banner-container span {
   font-size: 34px;
   color: rgb(244, 244, 244);
   font-family: wf_f52303b2efea42e1b4aeed119;
