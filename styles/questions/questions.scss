@@ -1,5 +1,5 @@
 .faq_section {
-  background-color: rgb(43, 43, 43);
+  background-color: rgb(22, 22, 22);
   color: #fff;
   width: 100%;
   display: flex;
@@ -35,10 +35,16 @@
   .faq_list {
     .faq_item {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       position: relative;
+      flex-direction: column;
       padding: 24px 0;
+      &.active {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+
       &::after {
         content: "";
         width: 100%;
@@ -46,6 +52,11 @@
         background-color: #353131;
         position: absolute;
         bottom: 0;
+      }
+      .faq_question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
       h3 {
         font-size: 18px;
@@ -55,6 +66,25 @@
         width: 24px;
         height: 24px;
         object-fit: cover;
+        cursor: pointer;
+      }
+      .faq_answer {
+        padding: 20px 0 6px;
+        display: none;
+
+        &.visible {
+          display: block;
+        }
+        p {
+          font-size: 16px;
+          line-height: 2;
+        }
+        .level {
+          font-weight: 700;
+        }
+        .info_about_course {
+          margin: 30px 24px;
+        }
       }
     }
   }
