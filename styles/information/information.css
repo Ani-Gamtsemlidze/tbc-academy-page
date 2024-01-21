@@ -16,7 +16,7 @@
   transition: 0.4s;
 }
 .information_container .read_more_link:hover {
-  color: rgb(170, 170, 170);
+  color: #aaaaaa;
 }
 .information_container .info_box {
   padding-top: 56px;
