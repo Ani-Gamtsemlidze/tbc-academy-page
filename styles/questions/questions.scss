@@ -1,16 +1,29 @@
-.faq_section {
+@font-face {
+  font-display: block;
+  font-family: wf_7737b5e7be24426aa35c9f431;
+  src: url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/woff2/file.woff2")
+      format("woff2"),
+    url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/woff/file.woff")
+      format("woff"),
+    url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/ttf/file.ttf")
+      format("ttf");
+}
+
+$view-all-font: wf_7737b5e7be24426aa35c9f431;
+$base-color: #f4f4f4;
+
+.faq-section {
   background-color: rgb(22, 22, 22);
-  color: #fff;
   width: 100%;
   min-height: fit-content;
   display: flex;
-  .container_faq {
+  .container-faq {
     max-width: 980px;
     width: 100%;
-    margin: 40px auto;
-    padding: 30px 20px 20px;
+    margin: 0 auto;
+    padding: 100px 40px;
   }
-  .faq_text {
+  .faq-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,23 +31,25 @@
     h2 {
       font-weight: 300;
       font-size: 24px;
-      color: rgb(244, 244, 244);
+      color: $base-color;
     }
-    .view_all {
+    .view-all {
       text-decoration: none;
+
       span {
         display: inline-block;
         color: #00aef3;
         font-size: 20px;
         transition: 0.4s;
+        font-family: $view-all-font;
         &:hover {
           color: #aaaaaa;
         }
       }
     }
   }
-  .faq_list {
-    .faq_item {
+  .faq-list {
+    .faq-item {
       cursor: pointer;
       display: flex;
       justify-content: space-between;
@@ -47,7 +62,7 @@
           transform: rotate(180deg);
         }
       }
-      .faq_question {
+      .faq-question {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -55,6 +70,7 @@
       h3 {
         font-size: 18px;
         font-weight: 300;
+        color: $base-color;
       }
       img {
         width: 24px;
@@ -62,12 +78,11 @@
         object-fit: cover;
         cursor: pointer;
       }
-      .faq_answer {
+      .faq-answer {
         padding: 0;
         overflow: hidden;
         height: 0;
-        transition: height 0.3s ease;
-
+        transition: height 0.3s ease-in-out;
         &.visible {
           height: auto;
           padding: 20px 0 6px;
@@ -75,11 +90,13 @@
         p {
           font-size: 16px;
           line-height: 2;
+          color: $base-color;
         }
+
         .level {
           font-weight: 700;
         }
-        .info_about_course {
+        .info-about-course {
           margin: 30px 24px;
         }
       }

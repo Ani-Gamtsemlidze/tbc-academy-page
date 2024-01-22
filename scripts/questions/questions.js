@@ -1,11 +1,11 @@
 export const questions = () => {
-  const questionItems = document.querySelectorAll(".faq_item");
+  const questionItems = document.querySelectorAll(".faq-item");
 
   for (const question of questionItems) {
     question.addEventListener("click", function () {
       this.classList.toggle("active");
 
-      const answer = this.querySelector(".faq_answer");
+      const answer = this.querySelector(".faq-answer");
 
       if (!answer.classList.contains("visible")) {
         answer.classList.add("visible");

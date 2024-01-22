@@ -1,41 +1,46 @@
-.faq_section {
+@font-face {
+  font-display: block;
+  font-family: wf_7737b5e7be24426aa35c9f431;
+  src: url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/ttf/file.ttf") format("ttf");
+}
+.faq-section {
   background-color: rgb(22, 22, 22);
-  color: #fff;
   width: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
   display: flex;
 }
-.faq_section .container_faq {
+.faq-section .container-faq {
   max-width: 980px;
   width: 100%;
-  margin: 40px auto;
-  padding: 30px 20px 20px;
+  margin: 0 auto;
+  padding: 100px 40px;
 }
-.faq_section .faq_text {
+.faq-section .faq-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 5px 20px 0;
 }
-.faq_section .faq_text h2 {
+.faq-section .faq-text h2 {
   font-weight: 300;
   font-size: 24px;
-  color: rgb(244, 244, 244);
+  color: #f4f4f4;
 }
-.faq_section .faq_text .view_all {
+.faq-section .faq-text .view-all {
   text-decoration: none;
 }
-.faq_section .faq_text .view_all span {
+.faq-section .faq-text .view-all span {
   display: inline-block;
   color: #00aef3;
   font-size: 20px;
   transition: 0.4s;
+  font-family: wf_7737b5e7be24426aa35c9f431;
 }
-.faq_section .faq_text .view_all span:hover {
+.faq-section .faq-text .view-all span:hover {
   color: #aaaaaa;
 }
-.faq_section .faq_list .faq_item {
+.faq-section .faq-list .faq-item {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -44,42 +49,44 @@
   padding: 24px 0;
   border-bottom: 1px solid #353131;
 }
-.faq_section .faq_list .faq_item.active img {
+.faq-section .faq-list .faq-item.active img {
   transform: rotate(180deg);
 }
-.faq_section .faq_list .faq_item .faq_question {
+.faq-section .faq-list .faq-item .faq-question {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.faq_section .faq_list .faq_item h3 {
+.faq-section .faq-list .faq-item h3 {
   font-size: 18px;
   font-weight: 300;
+  color: #f4f4f4;
 }
-.faq_section .faq_list .faq_item img {
+.faq-section .faq-list .faq-item img {
   width: 24px;
   height: 24px;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
 }
-.faq_section .faq_list .faq_item .faq_answer {
+.faq-section .faq-list .faq-item .faq-answer {
   padding: 0;
   overflow: hidden;
   height: 0;
-  transition: height 0.3s ease;
+  transition: height 0.3s ease-in-out;
 }
-.faq_section .faq_list .faq_item .faq_answer.visible {
+.faq-section .faq-list .faq-item .faq-answer.visible {
   height: auto;
   padding: 20px 0 6px;
 }
-.faq_section .faq_list .faq_item .faq_answer p {
+.faq-section .faq-list .faq-item .faq-answer p {
   font-size: 16px;
   line-height: 2;
+  color: #f4f4f4;
 }
-.faq_section .faq_list .faq_item .faq_answer .level {
+.faq-section .faq-list .faq-item .faq-answer .level {
   font-weight: 700;
 }
-.faq_section .faq_list .faq_item .faq_answer .info_about_course {
+.faq-section .faq-list .faq-item .faq-answer .info-about-course {
   margin: 30px 24px;
 }/*# sourceMappingURL=questions.css.map */
