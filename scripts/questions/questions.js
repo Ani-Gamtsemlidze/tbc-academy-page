@@ -18,13 +18,13 @@ export const questions = () => {
         container.style.height = "auto";
 
         // capture the current height of container and store it in variable
-        const containerHeight = `${container.clientHeight}px`;
+        const height = `${container.clientHeight}px`;
 
         // set container height to 0 and use setTimeOut for smooth transition
         container.style.height = "0px";
 
         setTimeout(() => {
-          container.style.height = containerHeight;
+          container.style.height = height;
         }, 0);
       } else {
         container.style.height = "0px";
