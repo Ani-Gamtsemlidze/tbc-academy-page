@@ -1,11 +1,22 @@
 .slider-section {
   background-color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+}
+.slider-section .slider-title {
+  padding: 34px 0 31px;
+}
+.slider-section .slider-title h2 {
+  color: #f4f4f4;
+  font-size: 24px;
+  font-weight: 300;
 }
 .slider-section .slider-arrow {
   width: 18px;
   height: 35px;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
 }
 .slider-section #next-arrow {
   transform: rotate(180deg);
@@ -14,12 +25,36 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 30px;
+  margin: 50px 0 25px;
 }
 .slider-section .slide {
+  max-width: 980px;
+  width: 100%;
+}
+.slider-section .slides-box {
   display: flex;
   align-items: center;
-  max-width: 980px;
   justify-content: space-between;
-  width: 100%;
+}
+.slider-section .last-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-bullets {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 50px;
+}
+.slider-bullets .bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #e8e6e6;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.slider-bullets .bullet.active {
+  background-color: #fff;
 }/*# sourceMappingURL=slider.css.map */
