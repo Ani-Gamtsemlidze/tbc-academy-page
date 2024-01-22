@@ -1,0 +1,24 @@
+.slider-section {
+  background-color: #2b2b2b;
+  .slider-arrow {
+    width: 18px;
+    height: 35px;
+    object-fit: cover;
+  }
+  #next-arrow {
+    transform: rotate(180deg);
+  }
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+  }
+  .slide {
+    display: flex;
+    align-items: center;
+    max-width: 980px;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
