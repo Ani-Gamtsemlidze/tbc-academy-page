@@ -1,6 +1,8 @@
 import { changeHeaderBackground } from "./header/header.js";
 import { questions } from "./questions/questions.js";
+import { sliderSwipe } from "./slider/slider.js";
 
-// Call the functions there
+// call functions in main js
 window.onscroll = changeHeaderBackground;
 questions();
+sliderSwipe();

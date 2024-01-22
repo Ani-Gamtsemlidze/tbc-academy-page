@@ -1,30 +1,39 @@
+// select all elements with class name ".faq-question" and store in variable.
+const questionItems = document.querySelectorAll(".faq-question");
+
+// use export to import this function in main script.js file
 export const questions = () => {
-  const questionItems = document.querySelectorAll(".faq-item");
-
+  // loop through each question
   for (const question of questionItems) {
-    question.addEventListener("click", function () {
-      this.classList.toggle("active");
+    question.addEventListener("click", (e) => {
+      e.preventDefault();
 
-      const answer = this.querySelector(".faq-answer");
+      // get the container element associated with the clicked question
 
-      if (!answer.classList.contains("visible")) {
-        answer.classList.add("visible");
-        answer.style.height = "auto";
+      const container = document.getElementById(question.dataset.container);
 
-        const height = answer.clientHeight + "px";
+      // check if container does not have "active" class name
+      if (!container.classList.contains("active")) {
+        container.classList.add("active");
+        container.style.height = "auto";
 
-        answer.style.height = "0px";
+        // capture the current height of container and store it in variable
+        const containerHeight = `${container.clientHeight}px`;
+
+        // set container height to 0 and use setTimeOut for smooth transition
+        container.style.height = "0px";
 
         setTimeout(() => {
-          answer.style.height = height;
+          container.style.height = containerHeight;
         }, 0);
       } else {
-        answer.style.height = "0px";
+        container.style.height = "0px";
 
-        answer.addEventListener(
+        // add a transitionend event listener to remove the "active" class after the transition
+        container.addEventListener(
           "transitionend",
-          function () {
-            answer.classList.remove("visible");
+          () => {
+            container.classList.remove("active");
           },
           {
             once: true,

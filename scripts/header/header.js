@@ -10,9 +10,7 @@ export const changeHeaderBackground = () => {
 
   // check if scroll position is greater than 0 - it means that user scrolls down
   // in that case set a slightly transparent background color
-  if (scrollPosition > 0) {
-    siteHeader.style.backgroundColor = "rgba(26, 30, 31, 0.9)";
-  } else {
-    siteHeader.style.backgroundColor = "rgb(26, 30, 31)";
-  }
+
+  siteHeader.style.backgroundColor =
+    scrollPosition > 0 ? "rgba(26, 30, 31, 0.9)" : "rgb(26, 30, 31)";
 };
