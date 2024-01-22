@@ -1,43 +1,45 @@
 @font-face {
   font-display: block;
-  font-family: wf_dd28b3957391427eb54de1c9e;
-  src: url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff2/file.woff2")
+  font-family: wf_93c16d86ec9d47d0a2a36894f;
+  src: url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/woff2/file.woff2")
       format("woff2"),
-    url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff/file.woff")
+    url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/woff/file.woff")
       format("woff"),
-    url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/ttf/file.ttf")
+    url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/ttf/file.ttf")
       format("ttf");
 }
 
-.learning_courses {
-  background-color: rgb(22, 22, 22);
-  .section_title {
-    padding: 34px 0 67px;
+$link-font: wf_93c16d86ec9d47d0a2a36894f;
+
+.learning-courses {
+  background-color: #161616;
+  display: flex;
+  .section-title {
+    margin: 34px 0 67px;
     h2 {
       color: #dbdbdb;
       font-size: 24px;
-      font-family: wf_dd28b3957391427eb54de1c9e;
       font-weight: 300;
     }
   }
 }
 
-.courses_container {
+.courses-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   padding-bottom: 58px;
 }
-.course_box {
+.course-box {
   border: 1px solid rgb(85, 85, 85);
   border-radius: 6px;
   width: 300px;
   height: 414px;
   display: flex;
   flex-direction: column;
-  margin: 0 13px 12px 0;
-  .course_img {
+  margin: 0 26px 20px 0;
+  .course-img {
     height: 150px;
     img {
       width: 100%;
@@ -47,40 +49,44 @@
       object-fit: cover;
     }
   }
-  .course_body {
+  .course-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
-    padding: 20px 10px 20px 20px;
+    padding: 34px 10px 20px 20px;
   }
   .text {
     color: #f4f4f4;
-    font-family: wf_dd28b3957391427eb54de1c9e;
   }
-  .course_title {
+  .course-title {
     font-size: 18px;
-    font-family: wf_dd28b3957391427eb54de1c9e;
     font-weight: 400;
   }
-  .registration_status {
+  .registration-status {
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 25px;
     display: inline-block;
   }
-  .course_info {
+  .course-info {
     display: flex;
     align-items: center;
     img {
       width: 17px;
       height: 16px;
       object-fit: cover;
-      margin-right: 20px;
+      margin: 12px 11px 7px 0px;
     }
-    span {
+    a {
+      text-decoration: none;
       color: #00aeef;
-      font-size: 14px;
+      font-size: 16px;
       display: inline-block;
+      transition: 0.4s;
+      font-family: $link-font;
+      &:hover {
+        color: #0080b0;
+      }
     }
   }
 }
