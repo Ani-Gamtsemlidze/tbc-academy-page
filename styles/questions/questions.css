@@ -19,16 +19,17 @@
 }
 .faq-section .container-faq .view-all {
   text-decoration: none;
-}
-.faq-section .container-faq .view-all span {
-  display: inline-block;
   color: #00aef3;
   font-size: 20px;
   transition: 0.4s;
   font-family: wf_7737b5e7be24426aa35c9f431;
 }
-.faq-section .container-faq .view-all span:hover {
+.faq-section .container-faq .view-all:hover {
   color: #aaaaaa;
+}
+.faq-section .container-faq .view-all-responsive {
+  display: none;
+  text-align: center;
 }
 .faq-section .faq-title {
   display: flex;
@@ -91,10 +92,18 @@
 }
 
 @media screen and (max-width: 992px) {
-  .faq-section .container-faq .view-all {
-    bottom: 30px;
-    right: 50%;
-    transform: translateX(50%);
+  .faq-section .container-faq {
+    padding: 50px 30px;
+  }
+  .faq-section .container-faq .faq-list .faq-item {
+    padding: 25px 0;
+  }
+  .faq-section .container-faq .view {
+    display: none;
+  }
+  .faq-section .container-faq .view-all-responsive {
+    display: block;
+    margin-top: 30px;
   }
   .faq-section .faq-title h2 {
     font-size: 22px;

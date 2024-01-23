@@ -40,11 +40,18 @@ $base-font: wf_7737b5e7be24426aa35c9f431;
 
 @media screen and (max-width: 992px) {
   .information-container {
+    padding: 32px 0;
     .course-description {
-      margin: 56px 0 0;
+      margin: 0;
       p {
         color: #f4f4f4;
-        font-size: 24px;
+        font-size: 15px;
+      }
+    }
+    .read-more {
+      margin-top: 32px;
+      .read-more-link {
+        font-size: 16px;
       }
     }
   }

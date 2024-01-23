@@ -29,11 +29,20 @@
 }
 
 @media screen and (max-width: 992px) {
+  .information-container {
+    padding: 32px 0;
+  }
   .information-container .course-description {
-    margin: 56px 0 0;
+    margin: 0;
   }
   .information-container .course-description p {
     color: #f4f4f4;
-    font-size: 24px;
+    font-size: 15px;
+  }
+  .information-container .read-more {
+    margin-top: 32px;
+  }
+  .information-container .read-more .read-more-link {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=information.css.map */

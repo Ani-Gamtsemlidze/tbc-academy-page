@@ -1,66 +1,104 @@
 .site-footer {
   background-color: #1a1e1f;
   display: flex;
-  //   padding: 64px 0 27px;
-
-  .footer-logos-container {
-    display: flex;
-    margin: 64px 0 27px;
-    // align-items: center;
+  .footer-container {
     justify-content: space-between;
+    padding: 64px 0 43px;
+    display: flex;
     .tbc-logo {
       width: 106px;
       height: 30px;
-      object-fit: cover;
-    }
-    .social-media-logos img {
-      width: 39px;
-      height: 39px;
-      object-fit: cover;
-    }
-    a {
-      text-decoration: none;
-    }
-    .facebook-logo {
-      margin-right: 7px;
-    }
-  }
-  .footer-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .copyright-terms-box {
-      .copyright-box span {
-        color: #fff;
-        font-size: 14px;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
       }
-      a {
-        text-decoration: none;
-        cursor: pointer;
-        color: #fff;
-        transition: 0.4s;
-        font-size: 14px;
-      }
-      .terms-link {
-        display: inline-block;
-        margin: 15px 0 43px;
-
-        &:hover {
-          color: #aaaaaa;
+    }
+    .footer-text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .copyright-terms-box {
+        .copyright-text {
+          margin: 27px 0 15px;
+          span {
+            color: #fff;
+            font-size: 14px;
+          }
+        }
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: #fff;
+          transition: 0.4s;
+          font-size: 14px;
+        }
+        .terms-link {
+          display: inline-block;
+          &:hover {
+            color: #aaaaaa;
+          }
         }
       }
     }
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .social-media-logos {
+        display: flex;
+        justify-content: flex-end;
+        img {
+          width: 39px;
+          height: 39px;
+          object-fit: cover;
+        }
+      }
+    }
+    .link {
+      display: none;
+    }
+    .contact-email-responsive {
+      display: block;
+    }
+
     .contact-link {
       border-radius: 6px;
       text-decoration: none;
       color: #fff;
       padding: 7px 30px;
-      margin: 0 0 30px;
       background-color: #00aef3;
       transition: 0.4s;
       &:hover {
         background-color: #d5d5d5;
         color: #353131;
+      }
+    }
+    .facebook-logo {
+      margin-right: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .site-footer {
+    .footer-container {
+      .contact-email-responsive {
+        display: none;
+      }
+      .link {
+        display: block;
+        margin-top: 40px;
+      }
+      .contact-box {
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+      .social-media-logos {
+        margin-bottom: 15px;
+        .facebook-logo {
+          margin-right: 15px;
+        }
       }
     }
   }

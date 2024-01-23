@@ -25,6 +25,6 @@
 
 @media screen and (max-width: 992px) {
   .container {
-    width: 70%;
+    padding: 0 24px;
   }
 }/*# sourceMappingURL=style.css.map */

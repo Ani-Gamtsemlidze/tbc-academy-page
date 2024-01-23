@@ -14,8 +14,9 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
 .learning-courses {
   background-color: #161616;
   display: flex;
+  padding: 34px 0 35px;
   .section-title {
-    margin: 34px 0 67px;
+    margin: 0 0 67px;
     h2 {
       color: #dbdbdb;
       font-size: 24px;
@@ -29,10 +30,9 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  padding-bottom: 58px;
   .course-box-wrapper {
     width: 33.3%;
-    padding: 10px;
+    padding: 0 35px 25px 0;
     .course-box {
       border: 1px solid rgb(85, 85, 85);
       border-radius: 6px;
@@ -97,8 +97,15 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
 }
 
 @media screen and (max-width: 992px) {
+  .learning-courses {
+    .section-title {
+      margin: 0 0 30px;
+    }
+  }
   .courses-container {
     .course-box-wrapper {
+      width: 100%;
+      padding: 0 0 25px 0;
       .course-box {
         margin: 0;
       }

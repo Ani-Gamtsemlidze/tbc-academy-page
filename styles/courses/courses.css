@@ -6,9 +6,10 @@
 .learning-courses {
   background-color: #161616;
   display: flex;
+  padding: 34px 0 35px;
 }
 .learning-courses .section-title {
-  margin: 34px 0 67px;
+  margin: 0 0 67px;
 }
 .learning-courses .section-title h2 {
   color: #dbdbdb;
@@ -21,11 +22,10 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  padding-bottom: 58px;
 }
 .courses-container .course-box-wrapper {
   width: 33.3%;
-  padding: 10px;
+  padding: 0 35px 25px 0;
 }
 .courses-container .course-box-wrapper .course-box {
   border: 1px solid rgb(85, 85, 85);
@@ -89,6 +89,13 @@
 }
 
 @media screen and (max-width: 992px) {
+  .learning-courses .section-title {
+    margin: 0 0 30px;
+  }
+  .courses-container .course-box-wrapper {
+    width: 100%;
+    padding: 0 0 25px 0;
+  }
   .courses-container .course-box-wrapper .course-box {
     margin: 0;
   }

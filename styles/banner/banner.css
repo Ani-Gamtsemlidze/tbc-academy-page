@@ -35,9 +35,10 @@
     margin-bottom: 0;
   }
   .main-container .banner-container .banner-title h1 {
-    font-size: 35px;
+    font-size: 28px;
+    margin-bottom: 2px;
   }
   .main-container .banner-container .banner-title h2 {
-    font-size: 30px;
+    font-size: 26px;
   }
 }/*# sourceMappingURL=banner.css.map */

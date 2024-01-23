@@ -43,9 +43,6 @@
 }
 
 @media screen and (max-width: 992px) {
-  .site-header .header-container {
-    width: 70%;
-  }
   .site-header .header-container .tbc-academy-logo img {
     width: 155px;
     height: 100%;

@@ -1,6 +1,7 @@
 // slider.js
 
 const sliderImages = document.querySelectorAll(".slide");
+const sliderSection = document.querySelector(".slider-section");
 const arrowPrev = document.getElementById("prev-arrow");
 const arrowNext = document.getElementById("next-arrow");
 
@@ -79,9 +80,7 @@ export const sliderSwipe = () => {
 
   init();
 
-  for (const arrow of sliderArrow) {
-    arrow.addEventListener("mousemove", stopAutoSlide);
-    // arrow.addEventListener("mouseleave", () => startAutoSlide(2000));
-  }
+  sliderSection.addEventListener("mousemove", stopAutoSlide);
+  // sliderSection.addEventListener("mouseleave", () => startAutoSlide(2000));
   // startAutoSlide(2000);
 };
