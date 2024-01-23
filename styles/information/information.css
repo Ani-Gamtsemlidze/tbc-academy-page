@@ -7,26 +7,24 @@
   background-color: #2b2b2b;
   width: 100%;
   display: flex;
-}
-.information-container .course-description {
-  margin: 56px 0 0;
+  padding: 56px 0;
 }
 .information-container .course-description p {
   color: #f4f4f4;
   font-size: 28px;
 }
-.information-container .read-more-link {
+.information-container .read-more {
+  margin-top: 43px;
+}
+.information-container .read-more .read-more-link {
   text-decoration: none;
   display: inline-block;
-  margin: 43px 0 57px;
   transition: 0.4s;
-}
-.information-container .read-more-link span {
   font-size: 20px;
   color: #00aef3;
   font-family: wf_7737b5e7be24426aa35c9f431;
 }
-.information-container .read-more-link:hover {
+.information-container .read-more .read-more-link:hover {
   color: #aaaaaa;
 }
 

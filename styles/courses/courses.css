@@ -19,24 +19,24 @@
 .courses-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-bottom: 58px;
 }
-
-.course-box {
+.courses-container .course-box-wrapper {
+  width: 33.3%;
+  padding: 10px;
+}
+.courses-container .course-box-wrapper .course-box {
   border: 1px solid rgb(85, 85, 85);
   border-radius: 6px;
-  width: 300px;
-  height: 414px;
   display: flex;
   flex-direction: column;
-  margin: 0 26px 20px 0;
 }
-.course-box .course-img {
+.courses-container .course-box-wrapper .course-box .course-img {
   height: 150px;
 }
-.course-box .course-img img {
+.courses-container .course-box-wrapper .course-box .course-img img {
   width: 100%;
   height: 100%;
   border-top-right-radius: 6px;
@@ -44,37 +44,39 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.course-box .course-body {
+.courses-container .course-box-wrapper .course-box .course-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
   padding: 34px 10px 20px 20px;
 }
-.course-box .text {
+.courses-container .course-box-wrapper .course-box .text {
   color: #f4f4f4;
 }
-.course-box .course-title {
+.courses-container .course-box-wrapper .course-box .course-title h3 {
   font-size: 18px;
   font-weight: 400;
 }
-.course-box .registration-status {
-  font-size: 14px;
+.courses-container .course-box-wrapper .course-box .registration-status {
   margin-top: 25px;
-  display: inline-block;
+  min-height: 100px;
 }
-.course-box .course-info {
+.courses-container .course-box-wrapper .course-box .registration-status p {
+  font-size: 14px;
+}
+.courses-container .course-box-wrapper .course-box .course-info {
   display: flex;
   align-items: center;
 }
-.course-box .course-info img {
+.courses-container .course-box-wrapper .course-box .course-info img {
   width: 17px;
   height: 16px;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 12px 11px 7px 0px;
 }
-.course-box .course-info a {
+.courses-container .course-box-wrapper .course-box .course-info a {
   text-decoration: none;
   color: #00aeef;
   font-size: 16px;
@@ -82,12 +84,12 @@
   transition: 0.4s;
   font-family: wf_93c16d86ec9d47d0a2a36894f;
 }
-.course-box .course-info a:hover {
+.courses-container .course-box-wrapper .course-box .course-info a:hover {
   color: #0080b0;
 }
 
 @media screen and (max-width: 992px) {
-  .courses-container .course-box {
+  .courses-container .course-box-wrapper .course-box {
     margin: 0;
   }
 }/*# sourceMappingURL=courses.css.map */

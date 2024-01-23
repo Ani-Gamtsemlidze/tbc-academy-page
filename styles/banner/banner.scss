@@ -23,17 +23,17 @@ $base-color: rgb(244, 244, 244);
     width: 100%;
     height: 352px;
     .banner-title {
-      margin-bottom: 20px;
-      h3 {
+      h1 {
+        margin-bottom: 20px;
         color: $base-color;
         font-family: $base-font;
         font-size: 48px;
       }
-    }
-    span {
-      font-size: 34px;
-      color: $base-color;
-      font-family: $base-font;
+      h2 {
+        font-size: 34px;
+        color: $base-color;
+        font-family: $base-font;
+      }
     }
   }
 }
@@ -44,12 +44,12 @@ $base-color: rgb(244, 244, 244);
       background: url(../../assets/images/banner.jpg) no-repeat center;
       .banner-title {
         margin-bottom: 0;
-        h3 {
+        h1 {
           font-size: 35px;
         }
-      }
-      span {
-        font-size: 30px;
+        h2 {
+          font-size: 30px;
+        }
       }
     }
   }

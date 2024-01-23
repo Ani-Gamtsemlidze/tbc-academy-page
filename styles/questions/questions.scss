@@ -26,9 +26,6 @@ $base-color: #f4f4f4;
     padding: 100px 40px;
     .view-all {
       text-decoration: none;
-      position: absolute;
-      right: 17%;
-
       span {
         display: inline-block;
         color: #00aef3;
@@ -45,7 +42,7 @@ $base-color: #f4f4f4;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 5px 20px 0;
+    margin: 0 0 20px 0;
     h2 {
       font-weight: 300;
       font-size: 24px;

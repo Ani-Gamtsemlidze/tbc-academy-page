@@ -1,4 +1,5 @@
 .site-header {
+  display: flex;
   background-color: #1a1e1f;
   align-items: center;
   justify-content: space-between;
@@ -6,17 +7,17 @@
   transition: background-color 0.4s, width 0.4s;
   position: fixed;
   z-index: 2;
+  height: 90px;
   top: 0;
   left: 0;
+}
+.site-header .burger-menu {
   display: none;
 }
 .site-header .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 980px;
-  width: 100%;
-  margin: 22px auto;
 }
 .site-header .header-container .tbc-academy-logo img {
   width: 182px;
@@ -39,4 +40,28 @@
 }
 .menu-list li a:hover {
   color: #00a3e0;
+}
+
+@media screen and (max-width: 992px) {
+  .site-header .header-container {
+    width: 70%;
+  }
+  .site-header .header-container .tbc-academy-logo img {
+    width: 155px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .site-header .main-navigation {
+    display: none;
+  }
+  .site-header .burger-menu {
+    display: block;
+  }
+  .site-header .burger-menu img {
+    width: 40px;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }/*# sourceMappingURL=header.css.map */
