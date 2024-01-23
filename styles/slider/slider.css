@@ -1,6 +1,6 @@
 .slider-section {
   background-color: #2b2b2b;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 .slider-section .slider-title {

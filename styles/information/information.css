@@ -28,4 +28,14 @@
 }
 .information-container .read-more-link:hover {
   color: #aaaaaa;
+}
+
+@media screen and (max-width: 992px) {
+  .information-container .course-description {
+    margin: 56px 0 0;
+  }
+  .information-container .course-description p {
+    color: #f4f4f4;
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=information.css.map */

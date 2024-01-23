@@ -27,4 +27,19 @@
   font-size: 34px;
   color: rgb(244, 244, 244);
   font-family: wf_f52303b2efea42e1b4aeed119;
+}
+
+@media screen and (max-width: 992px) {
+  .main-container .banner-container {
+    background: url(../../assets/images/banner.jpg) no-repeat center;
+  }
+  .main-container .banner-container .banner-title {
+    margin-bottom: 0;
+  }
+  .main-container .banner-container .banner-title h3 {
+    font-size: 35px;
+  }
+  .main-container .banner-container span {
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=banner.css.map */

@@ -21,4 +21,10 @@
   margin: 0 auto;
   max-width: 980px;
   width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 70%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,4 @@
 .site-header {
-  display: flex;
   background-color: #1a1e1f;
   align-items: center;
   justify-content: space-between;
@@ -9,6 +8,7 @@
   z-index: 2;
   top: 0;
   left: 0;
+  display: none;
 }
 .site-header .header-container {
   display: flex;

@@ -37,3 +37,20 @@ $base-color: rgb(244, 244, 244);
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .main-container {
+    .banner-container {
+      background: url(../../assets/images/banner.jpg) no-repeat center;
+      .banner-title {
+        margin-bottom: 0;
+        h3 {
+          font-size: 35px;
+        }
+      }
+      span {
+        font-size: 30px;
+      }
+    }
+  }
+}

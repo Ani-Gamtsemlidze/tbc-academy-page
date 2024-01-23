@@ -1,16 +1,22 @@
 // slider.js
 
+const sliderImages = document.querySelectorAll(".slide");
+const arrowPrev = document.getElementById("prev-arrow");
+const arrowNext = document.getElementById("next-arrow");
+
+const sliderArrow = document.querySelectorAll(".arrow");
+
+const bulletsContainer = document.querySelector(".slider-bullets");
+
+let currentIndex = 0;
+let slideInterval;
+
 export const sliderSwipe = () => {
-  const sliderImages = document.querySelectorAll(".slide");
-  const arrowPrev = document.getElementById("prev-arrow");
-  const arrowNext = document.getElementById("next-arrow");
-  const bulletsContainer = document.querySelector(".slider-bullets");
-
-  let currentIndex = 0;
-  let slideInterval;
-
   const hideAllSlides = () => {
-    sliderImages.forEach((image) => (image.style.display = "none"));
+    sliderImages.forEach((image) => {
+      image.classList.add("hideElement");
+      image.style.display = "none";
+    });
   };
 
   const createBullet = (index) => {
@@ -45,6 +51,7 @@ export const sliderSwipe = () => {
     hideAllSlides();
     sliderImages[index].style.display = "block";
     currentIndex = index;
+
     updateBullets();
   };
 
@@ -71,5 +78,10 @@ export const sliderSwipe = () => {
   };
 
   init();
+
+  for (const arrow of sliderArrow) {
+    arrow.addEventListener("mousemove", stopAutoSlide);
+    // arrow.addEventListener("mouseleave", () => startAutoSlide(2000));
+  }
   // startAutoSlide(2000);
 };

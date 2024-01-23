@@ -13,28 +13,21 @@ $view-all-font: wf_7737b5e7be24426aa35c9f431;
 $base-color: #f4f4f4;
 
 .faq-section {
+  position: relative;
   background-color: rgb(22, 22, 22);
   width: 100%;
   min-height: fit-content;
   display: flex;
+
   .container-faq {
     max-width: 980px;
     width: 100%;
     margin: 0 auto;
     padding: 100px 40px;
-  }
-  .faq-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 5px 20px 0;
-    h2 {
-      font-weight: 300;
-      font-size: 24px;
-      color: $base-color;
-    }
     .view-all {
       text-decoration: none;
+      position: absolute;
+      right: 17%;
 
       span {
         display: inline-block;
@@ -46,6 +39,17 @@ $base-color: #f4f4f4;
           color: #aaaaaa;
         }
       }
+    }
+  }
+  .faq-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px 20px 0;
+    h2 {
+      font-weight: 300;
+      font-size: 24px;
+      color: $base-color;
     }
   }
   .faq-list {
@@ -97,6 +101,23 @@ $base-color: #f4f4f4;
         .info-about-course {
           margin: 30px 24px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .faq-section {
+    .container-faq {
+      .view-all {
+        bottom: 30px;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+    .faq-title {
+      h2 {
+        font-size: 22px;
       }
     }
   }

@@ -27,7 +27,7 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
 .courses-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 58px;
 }
@@ -87,6 +87,14 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
       &:hover {
         color: #0080b0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .courses-container {
+    .course-box {
+      margin: 0;
     }
   }
 }

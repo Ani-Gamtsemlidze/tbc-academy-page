@@ -1,6 +1,6 @@
 .slider-section {
   background-color: #2b2b2b;
-  display: flex;
+  display: none;
   flex-direction: column;
   .slider-title {
     padding: 34px 0 31px;
@@ -29,6 +29,7 @@
     max-width: 980px;
     width: 100%;
   }
+
   .slides-box {
     display: flex;
     align-items: center;

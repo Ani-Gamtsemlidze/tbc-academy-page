@@ -37,3 +37,15 @@ $base-font: wf_7737b5e7be24426aa35c9f431;
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .information-container {
+    .course-description {
+      margin: 56px 0 0;
+      p {
+        color: #f4f4f4;
+        font-size: 24px;
+      }
+    }
+  }
+}
