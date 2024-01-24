@@ -18,6 +18,24 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    .menu-list {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      li {
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 14px;
+          padding: 15px;
+          transition: color 0.4s;
+
+          &:hover {
+            color: #00a3e0;
+          }
+        }
+      }
+    }
 
     .tbc-academy-logo img {
       width: 182px;
@@ -51,25 +69,6 @@
         a {
           padding: 0 25px;
         }
-      }
-    }
-  }
-}
-
-.menu-list {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  li {
-    a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
-      padding: 15px;
-      transition: color 0.4s;
-
-      &:hover {
-        color: #00a3e0;
       }
     }
   }
