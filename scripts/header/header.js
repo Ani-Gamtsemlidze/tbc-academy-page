@@ -19,7 +19,7 @@ export const changeHeaderBackground = () => {
 
 const burgerMenu = document.querySelector(".burger-menu");
 const mobileNavigation = document.querySelector(".respo-navigation");
-const closeMenu = document.querySelector(".open-menu");
+
 export const responsiveNavigation = () => {
   burgerMenu.addEventListener("click", function () {
     if (!burgerMenu.classList.contains("open-menu")) {
@@ -29,11 +29,7 @@ export const responsiveNavigation = () => {
     } else {
       mobileNavigation.style.display = "none";
       burgerMenu.classList.remove("open-menu");
+      document.body.style.overflow = "unset";
     }
   });
-
-  // closeMenu.addEventListener("click", function () {
-  //   // mobileNavigation.style.display = "none";
-  //   burgerMenu.classList.remove("open-menu");
-  // });
 };
