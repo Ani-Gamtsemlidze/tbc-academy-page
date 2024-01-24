@@ -2,8 +2,9 @@
   background-color: #2b2b2b;
   display: flex;
   flex-direction: column;
+  padding: 34px 0 31px;
+  position: relative;
   .slider-title {
-    padding: 34px 0 31px;
     h2 {
       color: #f4f4f4;
       font-size: 24px;
@@ -23,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    // height: 170px;
+    height: 224px;
   }
   .slide {
     max-width: 980px;
@@ -34,6 +35,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    img {
+      // width: 250px;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .last-slide {
     display: flex;
@@ -44,7 +50,10 @@
 .slider-bullets {
   display: flex;
   justify-content: center;
-  margin: 0 0 50px;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
 
   .bullet {
     width: 6px;
@@ -66,7 +75,7 @@
       flex-direction: column;
     }
     .slider-container {
-      margin: 0 0 25px;
+      height: 370px;
     }
     .slider-arrow {
       display: none;
@@ -80,6 +89,9 @@
       img {
         margin: 20px;
       }
+    }
+    .slider-bullets {
+      bottom: 40px;
     }
   }
 }

@@ -1,3 +1,6 @@
+$base-color: #fff;
+$font-size: $text-size;
+
 .site-footer {
   background-color: #1a1e1f;
   display: flex;
@@ -22,16 +25,16 @@
         .copyright-text {
           margin: 27px 0 15px;
           span {
-            color: #fff;
-            font-size: 14px;
+            color: $base-color;
+            font-size: $text-size;
           }
         }
         a {
           text-decoration: none;
           cursor: pointer;
-          color: #fff;
+          color: $base-color;
           transition: 0.4s;
-          font-size: 14px;
+          font-size: $text-size;
         }
         .terms-link {
           display: inline-block;
@@ -65,7 +68,7 @@
     .contact-link {
       border-radius: 6px;
       text-decoration: none;
-      color: #fff;
+      color: $base-color;
       padding: 7px 30px;
       background-color: #00aef3;
       transition: 0.4s;
