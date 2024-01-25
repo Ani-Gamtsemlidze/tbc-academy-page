@@ -51,9 +51,6 @@
   padding: 30px 0;
   border-bottom: 1px solid #353131;
 }
-.faq-section .faq-list .faq-item.active img {
-  transform: rotate(180deg);
-}
 .faq-section .faq-list .faq-item .faq-question {
   display: flex;
   align-items: center;
@@ -89,6 +86,9 @@
 }
 .faq-section .faq-list .faq-item .faq-answer .info-about-course {
   margin: 30px 24px;
+}
+.faq-section .faq-list .faq-item .rotate-arrow {
+  transform: rotate(180deg); /* Rotate the arrow 180 degrees */
 }
 
 @media screen and (max-width: 992px) {

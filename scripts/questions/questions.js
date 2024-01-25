@@ -11,10 +11,14 @@ export const questions = () => {
       // get the container element associated with the clicked question
 
       const container = document.getElementById(question.dataset.container);
+      const arrowImage = question.querySelector(".question-arrow");
+
+      arrowImage.classList.add("rotate-arrow");
 
       // check if container does not have "active" class name
       if (!container.classList.contains("active")) {
         container.classList.add("active");
+
         container.style.height = "auto";
 
         // capture the current height of container and store it in variable
@@ -28,6 +32,7 @@ export const questions = () => {
         }, 0);
       } else {
         container.style.height = "0px";
+        arrowImage.classList.remove("rotate-arrow");
 
         // add a transitionend event listener to remove the "active" class after the transition
         container.addEventListener(

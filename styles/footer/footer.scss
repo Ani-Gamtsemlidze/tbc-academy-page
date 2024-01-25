@@ -199,4 +199,22 @@ $text-size: 14px;
       }
     }
   }
+
+  .footer-terms {
+    .footer-terms-container {
+      width: 85%;
+      padding: 80px 32px 40px 30px;
+      .footer-terms-close {
+        top: 45px;
+        width: 26px;
+        height: 24px;
+      }
+      .terms-title {
+        font-size: 21px;
+      }
+      .footer-terms-close-btn {
+        margin-top: 100px;
+      }
+    }
+  }
 }

@@ -190,4 +190,19 @@
   .site-footer .footer-container .social-media-logos .facebook-logo {
     margin-right: 15px;
   }
+  .footer-terms .footer-terms-container {
+    width: 85%;
+    padding: 80px 32px 40px 30px;
+  }
+  .footer-terms .footer-terms-container .footer-terms-close {
+    top: 45px;
+    width: 26px;
+    height: 24px;
+  }
+  .footer-terms .footer-terms-container .terms-title {
+    font-size: 21px;
+  }
+  .footer-terms .footer-terms-container .footer-terms-close-btn {
+    margin-top: 100px;
+  }
 }/*# sourceMappingURL=footer.css.map */
