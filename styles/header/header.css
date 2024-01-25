@@ -49,11 +49,16 @@
   width: 100%;
   height: 100vh;
   top: -25px;
-  display: none;
-  transition: transform 0.4s cubic-bezier(0.06, -0.22, 0.66, 0.31);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+.respo-fade.active {
+  visibility: visible;
+  opacity: 1;
 }
 
-.respo-navigation .mobile-navigation {
+.mobile-navigation {
   position: absolute;
   right: 0;
   height: 100vh;
@@ -63,9 +68,9 @@
   text-align: right;
   transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
 }
-.respo-navigation .mobile-navigation::after {
-  background-color: rgb(34, 34, 34);
+.mobile-navigation::after {
   content: "";
+  background-color: rgb(34, 34, 34);
   height: 100vh;
   width: 60vw;
   position: absolute;
@@ -73,22 +78,44 @@
   right: 0;
   z-index: 1;
   transform: translateX(100%);
+  transition: all ease-out 0.5s;
 }
-.respo-navigation .mobile-navigation.active::after {
-  transform: translateX(0);
-}
-.respo-navigation .mobile-navigation .menu-list {
+.mobile-navigation .mobile-menu-list {
   display: block;
   margin-top: 80px;
-  z-index: 1;
+  padding: 0px 8px;
+  position: relative;
+  z-index: 10;
 }
-.respo-navigation .mobile-navigation .menu-list li {
+.mobile-navigation .mobile-menu-list li {
   margin: 20px 0;
+  list-style-type: none;
 }
-.respo-navigation .mobile-navigation .menu-list li a {
-  padding: 0 25px;
+.mobile-navigation .mobile-menu-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 15px;
+  transition: color 0.4s;
 }
 
+.respo-fade.active .mobile-navigation::after {
+  transform: translateX(0);
+}
+
+.respo-fade.active .mobile-menu-list li {
+  animation: mobileMenuAnime 0.4s linear;
+  animation-fill-mode: both;
+}
+
+@keyframes mobileMenuAnime {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @media screen and (max-width: 992px) {
   .site-header .header-container .tbc-academy-logo img {
     width: 155px;

@@ -20,20 +20,15 @@ export const changeHeaderBackground = () => {
 const burgerMenu = document.querySelector(".burger-menu");
 const mobileNavigation = document.querySelector(".respo-fade");
 
-const mobile = document.querySelector(".mobile-navigation");
-
 export const responsiveNavigation = () => {
   burgerMenu.addEventListener("click", function () {
     if (!burgerMenu.classList.contains("open-menu")) {
       burgerMenu.classList.add("open-menu");
-      mobile.classList.add("active");
-      mobileNavigation.style.display = "block";
+      mobileNavigation.classList.add("active");
       document.body.style.overflow = "hidden";
     } else {
-      mobileNavigation.style.display = "none";
-      mobile.classList.remove("active");
+      mobileNavigation.classList.remove("active");
       burgerMenu.classList.remove("open-menu");
-
       document.body.style.overflow = "unset";
     }
   });

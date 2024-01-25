@@ -51,51 +51,73 @@
   width: 100%;
   height: 100vh;
   top: -25px;
-  display: none;
-  transition: transform 0.4s cubic-bezier(0.06, -0.22, 0.66, 0.31);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
 }
-.respo-navigation {
-  // position: absolute;
-  // right: 0;
-  // background-color: rgba(34, 34, 34, 0.5);
-  // width: 100%;
-  // height: 100vh;
-  // top: -25px;
-  // display: none;
-  .mobile-navigation {
-    position: absolute;
-    right: 0;
+
+.mobile-navigation {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  &::after {
+    content: "";
+    background-color: rgb(34, 34, 34);
     height: 100vh;
-    width: 60%;
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
-    transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-    &::after {
-      background-color: rgb(34, 34, 34);
-      content: "";
-      height: 100vh;
-      width: 60vw;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 1;
-      transform: translateX(100%);
-    }
-    &.active::after {
-      transform: translateX(0);
-    }
-    .menu-list {
-      display: block;
-      margin-top: 80px;
-      z-index: 1;
-      li {
-        margin: 20px 0;
-        a {
-          padding: 0 25px;
-        }
+    width: 60vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: all ease-out 0.5s;
+  }
+
+  .mobile-menu-list {
+    display: block;
+    margin-top: 80px;
+    padding: 0px 8px;
+    position: relative;
+    z-index: 10;
+    li {
+      margin: 20px 0;
+      list-style-type: none;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 15px;
+        transition: color 0.4s;
       }
     }
+  }
+}
+
+.respo-fade.active .mobile-navigation::after {
+  transform: translateX(0);
+}
+.respo-fade.active .mobile-menu-list li {
+  animation: mobileMenuAnime 0.4s linear;
+  animation-fill-mode: both;
+}
+
+@keyframes mobileMenuAnime {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

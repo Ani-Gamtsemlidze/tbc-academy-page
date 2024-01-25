@@ -16,6 +16,10 @@
     height: 35px;
     object-fit: cover;
     cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      fill: #969494;
+    }
   }
   #next-arrow {
     transform: rotate(180deg);

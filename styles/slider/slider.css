@@ -16,6 +16,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
+  transition: 0.4s;
+}
+.slider-section .slider-arrow:hover {
+  fill: #969494;
 }
 .slider-section #next-arrow {
   transform: rotate(180deg);
