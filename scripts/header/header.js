@@ -18,17 +18,22 @@ export const changeHeaderBackground = () => {
 // responsive navigation
 
 const burgerMenu = document.querySelector(".burger-menu");
-const mobileNavigation = document.querySelector(".respo-navigation");
+const mobileNavigation = document.querySelector(".respo-fade");
+
+const mobile = document.querySelector(".mobile-navigation");
 
 export const responsiveNavigation = () => {
   burgerMenu.addEventListener("click", function () {
     if (!burgerMenu.classList.contains("open-menu")) {
       burgerMenu.classList.add("open-menu");
+      mobile.classList.add("active");
       mobileNavigation.style.display = "block";
       document.body.style.overflow = "hidden";
     } else {
       mobileNavigation.style.display = "none";
+      mobile.classList.remove("active");
       burgerMenu.classList.remove("open-menu");
+
       document.body.style.overflow = "unset";
     }
   });

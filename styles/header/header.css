@@ -42,7 +42,7 @@
      object-fit: cover;
 }
 
-.respo-navigation {
+.respo-fade {
   position: absolute;
   right: 0;
   background-color: rgba(34, 34, 34, 0.5);
@@ -50,20 +50,37 @@
   height: 100vh;
   top: -25px;
   display: none;
+  transition: transform 0.4s cubic-bezier(0.06, -0.22, 0.66, 0.31);
 }
+
 .respo-navigation .mobile-navigation {
   position: absolute;
-  background-color: rgb(34, 34, 34);
   right: 0;
   height: 100vh;
   width: 60%;
   display: flex;
   justify-content: flex-end;
   text-align: right;
+  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+}
+.respo-navigation .mobile-navigation::after {
+  background-color: rgb(34, 34, 34);
+  content: "";
+  height: 100vh;
+  width: 60vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transform: translateX(100%);
+}
+.respo-navigation .mobile-navigation.active::after {
+  transform: translateX(0);
 }
 .respo-navigation .mobile-navigation .menu-list {
   display: block;
   margin-top: 80px;
+  z-index: 1;
 }
 .respo-navigation .mobile-navigation .menu-list li {
   margin: 20px 0;
@@ -89,6 +106,7 @@
     height: 21px;
     width: 26px;
     transition: transform 0.33s ease-out;
+    z-index: 1;
   }
   .site-header .burger-menu .burger {
     background-color: #fff;
