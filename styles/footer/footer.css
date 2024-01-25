@@ -102,14 +102,61 @@
   position: relative;
   transform: translateX(100%);
   transition: all ease-out 0.6s;
+  overflow-y: scroll;
+}
+.footer-terms .footer-terms-container::-webkit-scrollbar {
+  width: 0;
 }
 .footer-terms .footer-terms-container .footer-terms-close {
-  width: 30px;
-  height: 30px;
-  background-color: red;
+  width: 21px;
+  height: 21px;
   position: absolute;
   top: 50px;
   right: 50px;
+  cursor: pointer;
+}
+.footer-terms .footer-terms-container .footer-terms-close img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer-terms .footer-terms-container .terms-title {
+  color: #8c8c8c;
+  font-size: 22px;
+  font-weight: 700;
+}
+.footer-terms .footer-terms-container .footer-terms-text p {
+  color: #8c8c8c;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.footer-terms .footer-terms-container .footer-terms-text p #email {
+  text-decoration: none;
+}
+.footer-terms .footer-terms-container .footer-terms-text h5 {
+  color: #8c8c8c;
+  font-size: 16px;
+}
+.footer-terms .footer-terms-container .footer-terms-text a {
+  color: #8c8c8c;
+  font-weight: 700;
+}
+.footer-terms .footer-terms-container .footer-terms-close-btn {
+  background-color: #dcdcdc;
+  color: #1c1c1c;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  margin-top: 80px;
+}
+.footer-terms .footer-terms-container .footer-terms-close-btn:hover {
+  background-color: #00aef3;
+  color: #fff;
 }
 
 @keyframes footerTermAnime {

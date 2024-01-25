@@ -105,13 +105,61 @@ $text-size: 14px;
     position: relative;
     transform: translateX(100%);
     transition: all ease-out 0.6s;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
     .footer-terms-close {
-      width: 30px;
-      height: 30px;
-      background-color: red;
+      width: 21px;
+      height: 21px;
       position: absolute;
       top: 50px;
       right: 50px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .terms-title {
+      color: #8c8c8c;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .footer-terms-text {
+      p {
+        color: #8c8c8c;
+        font-size: 14px;
+        margin: 20px 0;
+        #email {
+          text-decoration: none;
+        }
+      }
+      h5 {
+        color: #8c8c8c;
+        font-size: 16px;
+      }
+      a {
+        color: #8c8c8c;
+        font-weight: 700;
+      }
+    }
+    .footer-terms-close-btn {
+      background-color: #dcdcdc;
+      color: #1c1c1c;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.4s ease;
+      margin-top: 80px;
+      &:hover {
+        background-color: #00aef3;
+        color: #fff;
+      }
     }
   }
 }

@@ -4,6 +4,7 @@ const footerTerms = document.querySelector(".footer-terms");
 const footerTermsContainer = document.querySelector(".footer-terms-container");
 
 const termsClose = document.querySelector(".footer-terms-close");
+const termsClosebtn = document.querySelector(".footer-terms-close-btn");
 const footerFade = document.querySelector(".footer-terms");
 
 export const termsAndConditions = () => {
@@ -13,6 +14,9 @@ export const termsAndConditions = () => {
   });
 
   termsClose.addEventListener("click", function () {
+    footerTerms.classList.remove("active");
+  });
+  termsClosebtn.addEventListener("click", function () {
     footerTerms.classList.remove("active");
   });
 
