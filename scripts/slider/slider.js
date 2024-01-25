@@ -44,7 +44,6 @@ export const sliderSwipe = () => {
   const updateBullets = () => {
     const bullets = document.querySelectorAll(".bullet");
     bullets.forEach((bullet, index) => {
-      // console.log(index, currentIndex);
       bullet.classList.toggle("active", index === currentIndex);
     });
   };

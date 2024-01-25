@@ -4,6 +4,7 @@
   flex-direction: column;
   padding: 34px 0 31px;
   position: relative;
+  overflow-x: hidden;
   .slider-title {
     h2 {
       color: #f4f4f4;
@@ -84,29 +85,6 @@
     opacity: 1;
   }
 }
-@keyframes sliderAnimationRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes sliderAnimationLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.slideRightAnime {
-  animation: sliderAnimationRight 0.4s linear both !important;
-}
-.slideLeftAnime {
-  animation: sliderAnimationLeft 0.4s linear both !important;
-}
 
 @media screen and (max-width: 992px) {
   .slider-section {
@@ -132,5 +110,33 @@
     .slider-bullets {
       bottom: 40px;
     }
+  }
+
+  @keyframes sliderAnimationRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes sliderAnimationLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slideRightAnime {
+    animation: sliderAnimationRight 0.4s linear both !important;
+  }
+  .slideLeftAnime {
+    animation: sliderAnimationLeft 0.4s linear both !important;
   }
 }
