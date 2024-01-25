@@ -44,6 +44,7 @@ export const sliderSwipe = () => {
   const updateBullets = () => {
     const bullets = document.querySelectorAll(".bullet");
     bullets.forEach((bullet, index) => {
+      // console.log(index, currentIndex);
       bullet.classList.toggle("active", index === currentIndex);
     });
   };
@@ -51,8 +52,19 @@ export const sliderSwipe = () => {
   const goToSlide = (index) => {
     hideAllSlides();
     sliderImages[index].style.display = "block";
+    console.log(currentIndex, index);
+    if (index > currentIndex || index == currentIndex) {
+      sliderImages.forEach(function (slide) {
+        slide.classList.remove("slideLeftAnime");
+        slide.classList.add("slideRightAnime");
+      });
+    } else {
+      sliderImages.forEach(function (slide) {
+        slide.classList.remove("slideRightAnime");
+        slide.classList.add("slideLeftAnime");
+      });
+    }
     currentIndex = index;
-
     updateBullets();
   };
 
@@ -80,7 +92,7 @@ export const sliderSwipe = () => {
 
   init();
 
-  sliderContainer.addEventListener("mousemove", stopAutoSlide);
-  sliderContainer.addEventListener("mouseleave", () => startAutoSlide(2000));
-  startAutoSlide(2000);
+  sliderContainer.addEventListener("mouseenter", stopAutoSlide);
+  sliderContainer.addEventListener("mouseleave", () => startAutoSlide(7000));
+  startAutoSlide(7000);
 };

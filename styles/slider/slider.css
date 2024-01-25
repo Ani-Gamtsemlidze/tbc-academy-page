@@ -33,6 +33,7 @@
 .slider-section .slide {
   max-width: 980px;
   width: 100%;
+  animation: sliderAnimation 0.7s linear both;
 }
 .slider-section .slides-box {
   display: flex;
@@ -68,6 +69,38 @@
 }
 .slider-bullets .bullet.active {
   background-color: #fff;
+}
+
+@keyframes sliderAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sliderAnimationRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes sliderAnimationLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slideRightAnime {
+  animation: sliderAnimationRight 0.4s linear both !important;
+}
+
+.slideLeftAnime {
+  animation: sliderAnimationLeft 0.4s linear both !important;
 }
 
 @media screen and (max-width: 992px) {
