@@ -4,10 +4,10 @@
   src: url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/ttf/file.ttf") format("ttf");
 }
 .main-container {
-  padding-top: 82px;
+  padding-top: 90px;
 }
 .main-container .banner-container {
-  background: url(../../assets/images/banner.jpg) no-repeat;
+  background: url(../../assets/images/common-images/banner.jpg) no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
