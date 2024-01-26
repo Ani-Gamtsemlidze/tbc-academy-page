@@ -1,3 +1,4 @@
+// implement font
 @font-face {
   font-display: block;
   font-family: wf_93c16d86ec9d47d0a2a36894f;
@@ -9,7 +10,10 @@
       format("ttf");
 }
 
+// declare variables
 $link-font: wf_93c16d86ec9d47d0a2a36894f;
+
+// learning courses style
 
 .learning-courses {
   background-color: #161616;
@@ -71,7 +75,7 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
           font-size: 14px;
         }
       }
-      .course-info {
+      .course-details {
         display: flex;
         align-items: center;
         img {
@@ -95,6 +99,8 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
     }
   }
 }
+
+// responsive of learning courses section
 
 @media screen and (max-width: 992px) {
   .learning-courses {

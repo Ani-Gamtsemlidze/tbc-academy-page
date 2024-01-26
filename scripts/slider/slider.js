@@ -1,25 +1,26 @@
-// slider.js
-
-const sliderImages = document.querySelectorAll(".slide");
+// declare variables
+const slides = document.querySelectorAll(".slide");
 const sliderContainer = document.querySelector(".slider-container");
-const arrowPrev = document.getElementById("prev-arrow");
-const arrowNext = document.getElementById("next-arrow");
-
-const sliderArrow = document.querySelectorAll(".arrow");
-
+const prevArrow = document.getElementById("prev-arrow");
+const nextArrow = document.getElementById("next-arrow");
 const bulletsContainer = document.querySelector(".slider-bullets");
 
+let durationTime = 7000;
 let currentIndex = 0;
 let slideInterval;
 
-export const sliderSwipe = () => {
+// create slider function
+
+export const initSlider = () => {
+  // hide slide elements that are not currently visible
   const hideAllSlides = () => {
-    sliderImages.forEach((image) => {
-      image.classList.add("hideElement");
-      image.style.display = "none";
+    slides.forEach((slide) => {
+      slide.classList.add("hideElement");
+      slide.style.display = "none";
     });
   };
 
+  // create each bullet for a specific slide page
   const createBullet = (index) => {
     const bullet = document.createElement("span");
     bullet.classList.add("bullet");
@@ -28,18 +29,24 @@ export const sliderSwipe = () => {
     return bullet;
   };
 
+  // create bullets for each page
   const createBullets = () => {
-    sliderImages.forEach((_, index) => {
+    // Iterate over each slide, creating a bullet for each one
+    slides.forEach((_, index) => {
       createBullet(index);
     });
     updateBullets();
   };
 
+  // initilize the slider
   const init = () => {
     hideAllSlides();
-    sliderImages[0].style.display = "block";
+    // display the first slide only at first
+    slides[0].style.display = "block";
     createBullets();
   };
+
+  // Update the visual state of bullets based on the current slide index
 
   const updateBullets = () => {
     const bullets = document.querySelectorAll(".bullet");
@@ -48,50 +55,67 @@ export const sliderSwipe = () => {
     });
   };
 
+  // navigate to a specific slide by index
+
   const goToSlide = (index) => {
     hideAllSlides();
-    sliderImages[index].style.display = "block";
-    console.log(currentIndex, index);
-    if (index > currentIndex || index == currentIndex) {
-      sliderImages.forEach(function (slide) {
-        slide.classList.remove("slideLeftAnime");
-        slide.classList.add("slideRightAnime");
-      });
-    } else {
-      sliderImages.forEach(function (slide) {
-        slide.classList.remove("slideRightAnime");
-        slide.classList.add("slideLeftAnime");
-      });
-    }
+    // display the selected slide
+    slides[index].style.display = "block";
+
+    // determine the animation direction based on index
+
+    const directionClass =
+      index > currentIndex || index === currentIndex
+        ? "slideRightAnime"
+        : "slideLeftAnime";
+
+    // apply the animation classes to all slides
+
+    slides.forEach((slide) => {
+      slide.classList.remove("slideLeftAnime", "slideRightAnime");
+      slide.classList.add(directionClass);
+    });
+    // update the current index and bullets
     currentIndex = index;
     updateBullets();
   };
 
-  arrowPrev.addEventListener("click", () => {
-    currentIndex =
-      (currentIndex - 1 + sliderImages.length) % sliderImages.length;
+  prevArrow.addEventListener("click", () => {
+    // Calculate the index of the previous slide
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    // navigate to the previous slide
     goToSlide(currentIndex);
   });
 
-  arrowNext.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % sliderImages.length;
+  nextArrow.addEventListener("click", () => {
+    // calculate the index of the next slide
+    currentIndex = (currentIndex + 1) % slides.length;
+    // navigate to the next slide
     goToSlide(currentIndex);
   });
 
+  // start automatic slide transition
   const startAutoSlide = (duration) => {
     slideInterval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % sliderImages.length;
+      currentIndex = (currentIndex + 1) % slides.length;
       goToSlide(currentIndex);
     }, duration);
   };
+
+  // stop automatic slide transition and clear setInterval
 
   const stopAutoSlide = () => {
     clearInterval(slideInterval);
   };
 
+  // call the function of init slider
   init();
 
+  // add event listeners to pause on mouse enter and resume on mouse leave
   sliderContainer.addEventListener("mouseenter", stopAutoSlide);
-  sliderContainer.addEventListener("mouseleave", () => startAutoSlide(7000));
-  startAutoSlide(7000);
+  sliderContainer.addEventListener("mouseleave", () =>
+    startAutoSlide(durationTime)
+  );
+  // call the function of automatic slide and pass duration time as an argument
+  startAutoSlide(durationTime);
 };

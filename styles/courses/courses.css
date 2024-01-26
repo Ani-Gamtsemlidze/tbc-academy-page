@@ -65,18 +65,18 @@
 .courses-container .course-box-wrapper .course-box .registration-status p {
   font-size: 14px;
 }
-.courses-container .course-box-wrapper .course-box .course-info {
+.courses-container .course-box-wrapper .course-box .course-details {
   display: flex;
   align-items: center;
 }
-.courses-container .course-box-wrapper .course-box .course-info img {
+.courses-container .course-box-wrapper .course-box .course-details img {
   width: 17px;
   height: 16px;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 12px 11px 7px 0px;
 }
-.courses-container .course-box-wrapper .course-box .course-info a {
+.courses-container .course-box-wrapper .course-box .course-details a {
   text-decoration: none;
   color: #00aeef;
   font-size: 16px;
@@ -84,7 +84,7 @@
   transition: 0.4s;
   font-family: wf_93c16d86ec9d47d0a2a36894f;
 }
-.courses-container .course-box-wrapper .course-box .course-info a:hover {
+.courses-container .course-box-wrapper .course-box .course-details a:hover {
   color: #0080b0;
 }
 

@@ -1,5 +1,10 @@
+// declare variables
+$primary-bg-color: #2b2b2b;
+$text-color: #f4f4f4;
+
+// slider section style
 .slider-section {
-  background-color: #2b2b2b;
+  background-color: $primary-bg-color;
   display: flex;
   flex-direction: column;
   padding: 34px 0 31px;
@@ -7,7 +12,7 @@
   overflow-x: hidden;
   .slider-title {
     h2 {
-      color: #f4f4f4;
+      color: $text-color;
       font-size: 24px;
       font-weight: 300;
     }
@@ -42,7 +47,6 @@
     align-items: center;
     justify-content: space-between;
     img {
-      // width: 250px;
       height: 100%;
       object-fit: cover;
     }
@@ -75,7 +79,7 @@
   }
 }
 
-// keyframe animation
+// animation of slider
 
 @keyframes sliderAnimation {
   0% {
@@ -85,6 +89,8 @@
     opacity: 1;
   }
 }
+
+// responsive of slider section
 
 @media screen and (max-width: 992px) {
   .slider-section {
@@ -111,6 +117,8 @@
       bottom: 40px;
     }
   }
+
+  // slide animations for responsive design
 
   @keyframes sliderAnimationRight {
     0% {
