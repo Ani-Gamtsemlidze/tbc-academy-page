@@ -1,3 +1,28 @@
+// use mixins to handle common styles
+
+@mixin flex-style($justify, $center: false, $wrap: false, $direction: false) {
+  display: flex;
+  justify-content: $justify;
+  @if $center {
+    align-items: center;
+  }
+  @if $wrap {
+    flex-wrap: wrap;
+  }
+  @if $direction {
+    flex-direction: column;
+  }
+}
+
+@mixin courses-text($size, $weight, $color, $link: false) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  @if $link {
+    text-decoration: none;
+  }
+}
+
 // implement font
 @font-face {
   font-display: block;
@@ -22,26 +47,22 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
   .section-title {
     margin: 0 0 67px;
     h2 {
-      color: #dbdbdb;
-      font-size: 24px;
-      font-weight: 300;
+      @include courses-text(24px, 300, #dbdbdb);
     }
   }
 }
 
 .courses-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-style(flex-start, $center: true, $wrap: true);
+
   .course-box-wrapper {
     width: 33.3%;
     padding: 0 35px 25px 0;
     .course-box {
+      @include flex-style(unset, $center: false, $direction: true);
       border: 1px solid rgb(85, 85, 85);
       border-radius: 6px;
-      display: flex;
-      flex-direction: column;
+
       .course-img {
         height: 150px;
         img {
@@ -53,31 +74,25 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
         }
       }
       .course-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include flex-style(space-between, $center: false, $direction: true);
         flex-grow: 1;
         padding: 34px 10px 20px 20px;
       }
-      .text {
-        color: #f4f4f4;
-      }
       .course-title {
         h3 {
-          font-size: 18px;
-          font-weight: 400;
+          @include courses-text(18px, 300, #f4f4f4);
         }
       }
       .registration-status {
         margin-top: 25px;
         min-height: 100px;
         p {
-          font-size: 14px;
+          @include courses-text(14px, 300, #f4f4f4);
         }
       }
       .course-details {
-        display: flex;
-        align-items: center;
+        @include flex-style(unset, $center: true);
+
         img {
           width: 17px;
           height: 16px;
@@ -85,9 +100,7 @@ $link-font: wf_93c16d86ec9d47d0a2a36894f;
           margin: 12px 11px 7px 0px;
         }
         a {
-          text-decoration: none;
-          color: #00aeef;
-          font-size: 16px;
+          @include courses-text(16px, 300, #00aeef, $link: true);
           display: inline-block;
           transition: 0.4s;
           font-family: $link-font;

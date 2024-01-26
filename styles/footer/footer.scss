@@ -1,13 +1,28 @@
+// use mixins to handle common styles
+
+@mixin flex-style($direction: false, $center: false) {
+  display: flex;
+  justify-content: space-between;
+  @if $direction {
+    flex-direction: column;
+  }
+  @if $center {
+    align-items: center;
+  }
+}
+
+// declare variables
 $base-color: #fff;
 $text-size: 14px;
+
+// footer section style
 
 .site-footer {
   background-color: #1a1e1f;
   display: flex;
   .footer-container {
-    justify-content: space-between;
+    @include flex-style;
     padding: 64px 0 43px;
-    display: flex;
     .tbc-logo {
       width: 106px;
       height: 30px;
@@ -18,9 +33,8 @@ $text-size: 14px;
       }
     }
     .footer-text {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include flex-style($center: true);
+
       .copyright-terms-box {
         .copyright-text {
           margin: 27px 0 15px;
@@ -45,9 +59,7 @@ $text-size: 14px;
       }
     }
     .contact-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      @include flex-style($direction: true);
       .social-media-logos {
         display: flex;
         justify-content: flex-end;
@@ -83,6 +95,7 @@ $text-size: 14px;
   }
 }
 
+// footer terms style
 .footer-terms {
   background-color: rgba(22, 22, 22, 0.6);
   position: fixed;
@@ -164,6 +177,7 @@ $text-size: 14px;
   }
 }
 
+// animation of terms
 @keyframes footerTermAnime {
   0% {
     transform: translateX(100%);
@@ -176,6 +190,8 @@ $text-size: 14px;
   animation: footerTermAnime 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
   animation-fill-mode: forwards;
 }
+
+// responsive of footer
 
 @media screen and (max-width: 992px) {
   .site-footer {

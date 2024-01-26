@@ -7,7 +7,7 @@ import {
 } from "./header/header.js";
 
 // import function related to questions handling
-import { questions } from "./questions/questions.js";
+import { toggleFAQ } from "./questions/questions.js";
 
 // import function related to sinitialize the slider
 import { initSlider } from "./slider/slider.js";
@@ -16,7 +16,7 @@ import { termsAndConditions } from "./footer/terms.js";
 
 // call functions in main js file
 window.onscroll = changeHeaderVisibility;
-questions();
+toggleFAQ();
 initSlider();
 handleMobileNavigation();
 termsAndConditions();

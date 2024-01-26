@@ -1,3 +1,29 @@
+// use mixins to handle common styles
+
+@mixin flex-style($space: true, $center: true, $direction: false) {
+  display: flex;
+  @if $space {
+    justify-content: space-between;
+  }
+  @if $center {
+    align-items: center;
+  }
+  @if $direction {
+    flex-direction: column;
+  }
+}
+
+@mixin position($position, $top, $left: true, $right: true) {
+  position: $position;
+  top: $top;
+  @if $left {
+    left: 0;
+  }
+  @if $right {
+    right: 0;
+  }
+}
+
 // declare variables
 $primary-bg-color: #1a1e1f;
 $white-color: #fff;
@@ -7,29 +33,24 @@ $text-size: 14px;
 
 // header section's styles
 .site-header {
-  display: flex;
+  @include flex-style;
   background-color: $primary-bg-color;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
   transition: background-color 0.4s, width 0.4s;
-  position: fixed;
-  z-index: 2;
+  width: 100%;
   height: 90px;
-  top: 0;
-  left: 0;
+  @include position(fixed, 0, $right: false, $left: true);
+  z-index: 2;
   .mobile-menu-toggle {
     display: none;
   }
   .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-style;
+
     position: relative;
     .menu-list {
-      display: flex;
+      @include flex-style($space: false);
+
       list-style: none;
-      align-items: center;
       li {
         a {
           color: $white-color;
@@ -56,17 +77,14 @@ $text-size: 14px;
 }
 
 .mobile-menu {
-  position: absolute;
-  right: 0;
-  top: 0;
+  @include position(absolute, 0, $right: true, $left: false);
+
   &::after {
     content: "";
     background-color: #222222;
     height: 100vh;
     width: 60vw;
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position(absolute, 0, $right: true, $left: false);
     z-index: 1;
     transform: translateX(100%);
     transition: all ease-out 0.5s;
@@ -131,16 +149,13 @@ $text-size: 14px;
       display: none;
     }
     .mobile-menu-toggle {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      @include flex-style($space: true, $center: false, $direction: true);
       height: 21px;
       width: 26px;
       transition: transform 0.33s ease-out;
       z-index: 1;
       .menu-bar {
         background-color: $white-color;
-        border-radius: 1.5px;
         height: 3px;
         width: 27px;
         border-radius: 2px;
@@ -155,8 +170,8 @@ $text-size: 14px;
       }
     }
     .open-menu {
-      display: flex;
-      flex-direction: column;
+      @include flex-style($space: false, $center: false, $direction: true);
+
       transform: rotate(-45deg);
 
       .bar1 {
@@ -173,13 +188,11 @@ $text-size: 14px;
       }
     }
     .overlay-fade {
+      @include position(absolute, -25px, $right: true, $left: false);
       display: block;
-      position: absolute;
-      right: 0;
       background-color: $transparent-bg-color;
       width: 100%;
       height: 100vh;
-      top: -25px;
       visibility: hidden;
       opacity: 0;
       transition: 0.4s;

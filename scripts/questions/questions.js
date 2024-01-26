@@ -2,7 +2,7 @@
 const questionItems = document.querySelectorAll(".faq-question");
 
 // use export to import this function in main script.js file
-export const questions = () => {
+export const toggleFAQ = () => {
   // loop through each question
   for (const question of questionItems) {
     question.addEventListener("click", (e) => {
@@ -22,13 +22,13 @@ export const questions = () => {
         container.style.height = "auto";
 
         // capture the current height of container and store it in variable
-        const height = `${container.clientHeight}px`;
+        const elementHeight = `${container.clientHeight}px`;
 
         // set container height to 0 and use setTimeOut for smooth transition
         container.style.height = "0px";
 
         setTimeout(() => {
-          container.style.height = height;
+          container.style.height = elementHeight;
         }, 0);
       } else {
         container.style.height = "0px";

@@ -3,9 +3,9 @@
   display: flex;
 }
 .site-footer .footer-container {
+  display: flex;
   justify-content: space-between;
   padding: 64px 0 43px;
-  display: flex;
 }
 .site-footer .footer-container .tbc-logo {
   width: 106px;
@@ -19,8 +19,8 @@
 }
 .site-footer .footer-container .footer-text {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .site-footer .footer-container .footer-text .copyright-terms-box .copyright-text {
   margin: 27px 0 15px;
@@ -44,8 +44,8 @@
 }
 .site-footer .footer-container .contact-box {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
 }
 .site-footer .footer-container .contact-box .social-media-logos {
   display: flex;

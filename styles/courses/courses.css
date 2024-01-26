@@ -12,26 +12,27 @@
   margin: 0 0 67px;
 }
 .learning-courses .section-title h2 {
-  color: #dbdbdb;
   font-size: 24px;
   font-weight: 300;
+  color: #dbdbdb;
 }
 
 .courses-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 .courses-container .course-box-wrapper {
   width: 33.3%;
   padding: 0 35px 25px 0;
 }
 .courses-container .course-box-wrapper .course-box {
+  display: flex;
+  justify-content: unset;
+  flex-direction: column;
   border: 1px solid rgb(85, 85, 85);
   border-radius: 6px;
-  display: flex;
-  flex-direction: column;
 }
 .courses-container .course-box-wrapper .course-box .course-img {
   height: 150px;
@@ -46,17 +47,15 @@
 }
 .courses-container .course-box-wrapper .course-box .course-body {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
   flex-grow: 1;
   padding: 34px 10px 20px 20px;
 }
-.courses-container .course-box-wrapper .course-box .text {
-  color: #f4f4f4;
-}
 .courses-container .course-box-wrapper .course-box .course-title h3 {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
+  color: #f4f4f4;
 }
 .courses-container .course-box-wrapper .course-box .registration-status {
   margin-top: 25px;
@@ -64,9 +63,12 @@
 }
 .courses-container .course-box-wrapper .course-box .registration-status p {
   font-size: 14px;
+  font-weight: 300;
+  color: #f4f4f4;
 }
 .courses-container .course-box-wrapper .course-box .course-details {
   display: flex;
+  justify-content: unset;
   align-items: center;
 }
 .courses-container .course-box-wrapper .course-box .course-details img {
@@ -77,9 +79,10 @@
   margin: 12px 11px 7px 0px;
 }
 .courses-container .course-box-wrapper .course-box .course-details a {
-  text-decoration: none;
-  color: #00aeef;
   font-size: 16px;
+  font-weight: 300;
+  color: #00aeef;
+  text-decoration: none;
   display: inline-block;
   transition: 0.4s;
   font-family: wf_93c16d86ec9d47d0a2a36894f;

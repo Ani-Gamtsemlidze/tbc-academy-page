@@ -1,6 +1,21 @@
+// use mixins to handle common styles
+
+@mixin flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin faq-text($font-weight, $font-size, $color) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+}
+
+// implement font
 @font-face {
   font-display: block;
-  font-family: wf_7737b5e7be24426aa35c9f431;
+  font-family: wf_7737b5e7be24426aa35c9f431, sans-serif;
   src: url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/woff2/file.woff2")
       format("woff2"),
     url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/woff/file.woff")
@@ -9,16 +24,17 @@
       format("ttf");
 }
 
+// declare variables
 $view-all-font: wf_7737b5e7be24426aa35c9f431;
 $base-color: #f4f4f4;
 
+// faq section style
 .faq-section {
   position: relative;
-  background-color: rgb(22, 22, 22);
+  background-color: #161616;
   width: 100%;
   min-height: fit-content;
   display: flex;
-
   .container-faq {
     max-width: 980px;
     width: 100%;
@@ -29,7 +45,7 @@ $base-color: #f4f4f4;
       color: #00aef3;
       font-size: 20px;
       transition: 0.4s;
-      font-family: $view-all-font;
+      font-family: $view-all-font, sans-serif;
       &:hover {
         color: #aaaaaa;
       }
@@ -40,35 +56,25 @@ $base-color: #f4f4f4;
     }
   }
   .faq-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-container;
     margin: 0 0 20px 0;
     h2 {
-      font-weight: 300;
-      font-size: 24px;
-      color: $base-color;
+      @include faq-text(300, 24px, $base-color);
     }
   }
   .faq-list {
     .faq-item {
       cursor: pointer;
-      display: flex;
-      justify-content: space-between;
+
       position: relative;
-      flex-direction: column;
       padding: 30px 0;
       border-bottom: 1px solid #353131;
 
       .faq-question {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-container;
       }
       h3 {
-        font-size: 18px;
-        font-weight: 300;
-        color: $base-color;
+        @include faq-text(300, 18px, $base-color);
       }
       img {
         width: 24px;
@@ -82,11 +88,10 @@ $base-color: #f4f4f4;
         &:not(.active) {
           display: none;
         }
-
         p {
-          font-size: 14px;
+          @include faq-text(300, 14px, $base-color);
+
           line-height: 2;
-          color: $base-color;
           margin-top: 30px;
         }
 
@@ -97,15 +102,15 @@ $base-color: #f4f4f4;
           margin: 30px 24px;
         }
       }
-      // .question-arrow {
-      //   transform: rotate(180deg);
-      // }
+
       .rotate-arrow {
-        transform: rotate(180deg); /* Rotate the arrow 180 degrees */
+        transform: rotate(180deg);
       }
     }
   }
 }
+
+// responsive of faq section
 
 @media screen and (max-width: 992px) {
   .faq-section {
