@@ -1,3 +1,5 @@
+// implement font.
+
 @font-face {
   font-display: block;
   font-family: wf_7737b5e7be24426aa35c9f431;
@@ -8,17 +10,22 @@
     url("https://static.wixstatic.com/ufonts/dd97f4_7737b5e7be24426aa35c9f4311c1de96/ttf/file.ttf")
       format("ttf");
 }
+// declare variables.
 
-$base-font: wf_7737b5e7be24426aa35c9f431;
+$main-font: wf_7737b5e7be24426aa35c9f431;
+$primary-bg-color: #2b2b2b;
+$description-txt-color: #f4f4f4;
+$link-txt-color: #00aef3;
+$link-txt-hover: #aaaaaa;
 
 .information-container {
-  background-color: #2b2b2b;
+  background-color: $primary-bg-color;
   width: 100%;
   display: flex;
   padding: 56px 0;
   .course-description {
     p {
-      color: #f4f4f4;
+      color: $description-txt-color;
       font-size: 28px;
     }
   }
@@ -29,22 +36,22 @@ $base-font: wf_7737b5e7be24426aa35c9f431;
       display: inline-block;
       transition: 0.4s;
       font-size: 20px;
-      color: #00aef3;
-      font-family: $base-font;
+      color: $link-txt-color;
+      font-family: $main-font;
       &:hover {
-        color: #aaaaaa;
+        color: $link-txt-hover;
       }
     }
   }
 }
 
+// responsive of information section.
 @media screen and (max-width: 992px) {
   .information-container {
     padding: 32px 0;
     .course-description {
       margin: 0;
       p {
-        color: #f4f4f4;
         font-size: 15px;
       }
     }

@@ -3,10 +3,7 @@
   font-family: wf_f52303b2efea42e1b4aeed119;
   src: url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff2/file.woff2") format("woff2"), url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff/file.woff") format("woff"), url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/ttf/file.ttf") format("ttf");
 }
-.main-container {
-  padding-top: 90px;
-}
-.main-container .banner-container {
+.banner-container {
   background: url(../../assets/images/common-images/banner.jpg) no-repeat;
   background-size: cover;
   display: flex;
@@ -15,30 +12,30 @@
   width: 100%;
   height: 352px;
 }
-.main-container .banner-container .banner-title h1 {
+.banner-container .banner-title h1 {
   margin-bottom: 20px;
-  color: rgb(244, 244, 244);
+  color: #f4f4f4;
   font-family: wf_f52303b2efea42e1b4aeed119;
   font-size: 48px;
 }
-.main-container .banner-container .banner-title h2 {
+.banner-container .banner-title h2 {
   font-size: 34px;
-  color: rgb(244, 244, 244);
+  color: #f4f4f4;
   font-family: wf_f52303b2efea42e1b4aeed119;
 }
 
 @media screen and (max-width: 992px) {
-  .main-container .banner-container {
+  .banner-container {
     background: url(../../assets/images/common-images/banner.jpg) no-repeat center;
   }
-  .main-container .banner-container .banner-title {
+  .banner-container .banner-title {
     margin-bottom: 0;
   }
-  .main-container .banner-container .banner-title h1 {
+  .banner-container .banner-title h1 {
     font-size: 28px;
     margin-bottom: 2px;
   }
-  .main-container .banner-container .banner-title h2 {
+  .banner-container .banner-title h2 {
     font-size: 26px;
   }
 }/*# sourceMappingURL=banner.css.map */

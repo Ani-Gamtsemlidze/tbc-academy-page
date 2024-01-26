@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
 }
-.site-header .burger-menu {
+.site-header .mobile-menu-toggle {
   display: none;
 }
 .site-header .header-container {
@@ -29,48 +29,31 @@
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  padding: 15px;
+  padding: 0 15px;
   transition: color 0.4s;
 }
 .site-header .header-container .menu-list li a:hover {
   color: #00a3e0;
 }
-.site-header .header-container .tbc-academy-logo img {
+.site-header .header-container .header-logo img {
   width: 182px;
   height: 40px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.respo-fade {
-  position: absolute;
-  right: 0;
-  background-color: rgba(34, 34, 34, 0.5);
-  width: 100%;
-  height: 100vh;
-  top: -25px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.4s;
-}
-.respo-fade.active {
-  visibility: visible;
-  opacity: 1;
+.overlay-fade {
+  display: none;
 }
 
-.mobile-navigation {
+.mobile-menu {
   position: absolute;
   right: 0;
-  height: 100vh;
-  width: 60%;
-  display: flex;
-  justify-content: flex-end;
-  text-align: right;
-  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  top: 0;
 }
-.mobile-navigation::after {
+.mobile-menu::after {
   content: "";
-  background-color: rgb(34, 34, 34);
+  background-color: #222222;
   height: 100vh;
   width: 60vw;
   position: absolute;
@@ -80,30 +63,31 @@
   transform: translateX(100%);
   transition: all ease-out 0.5s;
 }
-.mobile-navigation .mobile-menu-list {
+.mobile-menu .mobile-menu-items {
   display: block;
-  margin-top: 80px;
+  text-align: right;
+  margin-top: 90px;
   padding: 0px 8px;
   position: relative;
   z-index: 10;
 }
-.mobile-navigation .mobile-menu-list li {
+.mobile-menu .mobile-menu-items li {
   margin: 20px 0;
   list-style-type: none;
 }
-.mobile-navigation .mobile-menu-list li a {
+.mobile-menu .mobile-menu-items li a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  padding: 15px;
+  padding: 0 20px;
   transition: color 0.4s;
 }
 
-.respo-fade.active .mobile-navigation::after {
+.overlay-fade.active .mobile-menu::after {
   transform: translateX(0);
 }
 
-.respo-fade.active .mobile-menu-list li {
+.overlay-fade.active .mobile-menu-items li {
   animation: mobileMenuAnime 0.4s linear;
   animation-fill-mode: both;
 }
@@ -117,7 +101,7 @@
   }
 }
 @media screen and (max-width: 992px) {
-  .site-header .header-container .tbc-academy-logo img {
+  .site-header .header-container .header-logo img {
     width: 155px;
     height: 100%;
     -o-object-fit: cover;
@@ -126,7 +110,7 @@
   .site-header .main-navigation {
     display: none;
   }
-  .site-header .burger-menu {
+  .site-header .mobile-menu-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -135,19 +119,19 @@
     transition: transform 0.33s ease-out;
     z-index: 1;
   }
-  .site-header .burger-menu .burger {
+  .site-header .mobile-menu-toggle .menu-bar {
     background-color: #fff;
     border-radius: 1.5px;
     height: 3px;
     width: 27px;
     border-radius: 2px;
   }
-  .site-header .burger-menu .burger1,
-  .site-header .burger-menu .burger3 {
+  .site-header .mobile-menu-toggle .bar1,
+  .site-header .mobile-menu-toggle .bar3 {
     width: 50%;
     transition: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
   }
-  .site-header .burger-menu .burger3 {
+  .site-header .mobile-menu-toggle .bar3 {
     align-self: flex-end;
   }
   .site-header .open-menu {
@@ -155,15 +139,31 @@
     flex-direction: column;
     transform: rotate(-45deg);
   }
-  .site-header .open-menu .burger1 {
+  .site-header .open-menu .bar1 {
     transform: rotate(-90deg) translateX(4px);
     transform-origin: right;
   }
-  .site-header .open-menu .burger-2 {
+  .site-header .open-menu .bar-2 {
     width: 27px !important;
   }
-  .site-header .open-menu .burger3 {
+  .site-header .open-menu .bar3 {
     transform: rotate(-90deg) translateX(-4px);
     transform-origin: left;
+  }
+  .site-header .overlay-fade {
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: rgba(34, 34, 34, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: -25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  .site-header .overlay-fade.active {
+    visibility: visible;
+    opacity: 1;
   }
 }/*# sourceMappingURL=header.css.map */

@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+.main-container {
+  padding-top: 90px;
+}
+
 @media screen and (max-width: 992px) {
   .container {
     padding: 0 24px;

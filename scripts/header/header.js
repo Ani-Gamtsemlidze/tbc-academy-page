@@ -1,35 +1,49 @@
-// make header less visible while user scrolls down.
+// declare variables and get elements.
+const headerElement = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".mobile-menu-toggle");
+const overlayFade = document.querySelector(".overlay-fade");
+const mobileMenu = document.querySelector(".mobile-menu");
 
-// export function to use in main js file, which is connected with index.html
+// export function to use in main js file, which is connected with html file.
+// adjust header visibility based on scroll position.
 
-export const changeHeaderBackground = () => {
-  const siteHeader = document.querySelector(".site-header");
-
+export const changeHeaderVisibility = () => {
   // get the current scroll position
   const scrollPosition = window.scrollY;
 
-  // check if scroll position is greater than 0 - it means that user scrolls down
-  // in that case set a slightly transparent background color
+  // check if scroll position is greater than 0 - user scrolls down
+  //  set a slightly transparent background for the header
 
-  siteHeader.style.backgroundColor =
+  headerElement.style.backgroundColor =
     scrollPosition > 0 ? "rgba(26, 30, 31, 0.9)" : "rgb(26, 30, 31)";
 };
 
-// responsive navigation
+// handle the mobile navigation
 
-const burgerMenu = document.querySelector(".burger-menu");
-const mobileNavigation = document.querySelector(".respo-fade");
-
-export const responsiveNavigation = () => {
-  burgerMenu.addEventListener("click", function () {
-    if (!burgerMenu.classList.contains("open-menu")) {
-      burgerMenu.classList.add("open-menu");
-      mobileNavigation.classList.add("active");
+export const handleMobileNavigation = () => {
+  menuToggle.addEventListener("click", function () {
+    // if mobile menu doesnt contain below class names, add the class and apply styling
+    if (!menuToggle.classList.contains("open-menu")) {
+      menuToggle.classList.add("open-menu");
+      overlayFade.classList.add("active");
+      // while user opens mobile menu it cant be scrolled
       document.body.style.overflow = "hidden";
     } else {
-      mobileNavigation.classList.remove("active");
-      burgerMenu.classList.remove("open-menu");
+      // if the mobile menu already has those classes we need to remove them.
+      overlayFade.classList.remove("active");
+      menuToggle.classList.remove("open-menu");
       document.body.style.overflow = "unset";
     }
+  });
+
+  // prevent clicks inside the mobile menu from closing it.
+
+  mobileMenu.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+
+  overlayFade.addEventListener("click", function () {
+    overlayFade.classList.remove("active");
+    menuToggle.classList.remove("open-menu");
   });
 };

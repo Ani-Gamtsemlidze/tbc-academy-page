@@ -1,6 +1,14 @@
+// declare variables
+$primary-bg-color: #1a1e1f;
+$white-color: #fff;
+$hover-color: #00a3e0;
+$transparent-bg-color: rgba(34, 34, 34, 0.5);
+$text-size: 14px;
+
+// header section's styles
 .site-header {
   display: flex;
-  background-color: #1a1e1f;
+  background-color: $primary-bg-color;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -10,7 +18,7 @@
   height: 90px;
   top: 0;
   left: 0;
-  .burger-menu {
+  .mobile-menu-toggle {
     display: none;
   }
   .header-container {
@@ -24,55 +32,36 @@
       align-items: center;
       li {
         a {
-          color: #fff;
+          color: $white-color;
           text-decoration: none;
-          font-size: 14px;
-          padding: 15px;
+          font-size: $text-size;
+          padding: 0 15px;
           transition: color 0.4s;
-
           &:hover {
-            color: #00a3e0;
+            color: $hover-color;
           }
         }
       }
     }
 
-    .tbc-academy-logo img {
+    .header-logo img {
       width: 182px;
       height: 40px;
       object-fit: cover;
     }
   }
 }
-.respo-fade {
-  position: absolute;
-  right: 0;
-  background-color: rgba(34, 34, 34, 0.5);
-  width: 100%;
-  height: 100vh;
-  top: -25px;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.4s;
-
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
+.overlay-fade {
+  display: none;
 }
 
-.mobile-navigation {
+.mobile-menu {
   position: absolute;
   right: 0;
-  height: 100vh;
-  width: 60%;
-  display: flex;
-  justify-content: flex-end;
-  text-align: right;
-  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  top: 0;
   &::after {
     content: "";
-    background-color: rgb(34, 34, 34);
+    background-color: #222222;
     height: 100vh;
     width: 60vw;
     position: absolute;
@@ -83,9 +72,10 @@
     transition: all ease-out 0.5s;
   }
 
-  .mobile-menu-list {
+  .mobile-menu-items {
     display: block;
-    margin-top: 80px;
+    text-align: right;
+    margin-top: 90px;
     padding: 0px 8px;
     position: relative;
     z-index: 10;
@@ -94,23 +84,25 @@
       list-style-type: none;
 
       a {
-        color: #fff;
+        color: $white-color;
         text-decoration: none;
-        font-size: 14px;
-        padding: 15px;
+        font-size: $text-size;
+        padding: 0 20px;
         transition: color 0.4s;
       }
     }
   }
 }
 
-.respo-fade.active .mobile-navigation::after {
+.overlay-fade.active .mobile-menu::after {
   transform: translateX(0);
 }
-.respo-fade.active .mobile-menu-list li {
+.overlay-fade.active .mobile-menu-items li {
   animation: mobileMenuAnime 0.4s linear;
   animation-fill-mode: both;
 }
+
+// animation for mobile menu
 
 @keyframes mobileMenuAnime {
   0% {
@@ -121,10 +113,12 @@
   }
 }
 
+// responsive of mobile menu
+
 @media screen and (max-width: 992px) {
   .site-header {
     .header-container {
-      .tbc-academy-logo {
+      .header-logo {
         img {
           width: 155px;
           height: 100%;
@@ -136,7 +130,7 @@
     .main-navigation {
       display: none;
     }
-    .burger-menu {
+    .mobile-menu-toggle {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -144,19 +138,19 @@
       width: 26px;
       transition: transform 0.33s ease-out;
       z-index: 1;
-      .burger {
-        background-color: #fff;
+      .menu-bar {
+        background-color: $white-color;
         border-radius: 1.5px;
         height: 3px;
         width: 27px;
         border-radius: 2px;
       }
-      .burger1,
-      .burger3 {
+      .bar1,
+      .bar3 {
         width: 50%;
         transition: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
       }
-      .burger3 {
+      .bar3 {
         align-self: flex-end;
       }
     }
@@ -165,17 +159,33 @@
       flex-direction: column;
       transform: rotate(-45deg);
 
-      .burger1 {
+      .bar1 {
         transform: rotate(-90deg) translateX(4px);
         transform-origin: right;
       }
-      .burger-2 {
+      .bar-2 {
         width: 27px !important;
       }
 
-      .burger3 {
+      .bar3 {
         transform: rotate(-90deg) translateX(-4px);
         transform-origin: left;
+      }
+    }
+    .overlay-fade {
+      display: block;
+      position: absolute;
+      right: 0;
+      background-color: $transparent-bg-color;
+      width: 100%;
+      height: 100vh;
+      top: -25px;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s;
+      &.active {
+        visibility: visible;
+        opacity: 1;
       }
     }
   }
