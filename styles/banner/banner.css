@@ -27,6 +27,7 @@
 @media screen and (max-width: 992px) {
   .banner-container {
     background: url(../../assets/images/common-images/banner.jpg) no-repeat center;
+    height: 300px;
   }
   .banner-container .banner-title {
     margin-bottom: 0;

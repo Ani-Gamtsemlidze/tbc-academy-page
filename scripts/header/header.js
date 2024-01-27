@@ -52,9 +52,7 @@ export const handleMobileNavigation = () => {
 
 export const handleHeaderScroll = () => {
   let lastScrollTop = 0;
-  let scrollThreshold = 80;
-  // scrollThresHold
-
+  let scrollThreshold = 90;
   const adjustHeaderOnScroll = () => {
     // get the current vertical scroll position of the webpage.
     const scrollOffSet =
