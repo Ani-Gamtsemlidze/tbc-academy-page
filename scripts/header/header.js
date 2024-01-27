@@ -52,7 +52,7 @@ export const handleMobileNavigation = () => {
 
 export const handleHeaderScroll = () => {
   let lastScrollTop = 0;
-  let scrollThreshold = 50;
+  let scrollThreshold = 80;
   // scrollThresHold
 
   const adjustHeaderOnScroll = () => {
