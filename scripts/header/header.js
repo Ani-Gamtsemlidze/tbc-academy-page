@@ -47,3 +47,44 @@ export const handleMobileNavigation = () => {
     menuToggle.classList.remove("open-menu");
   });
 };
+
+// while user scrolling down in mobile version the header is hidden
+
+export const handleHeaderScroll = () => {
+  let lastScrollTop = 0;
+
+  const adjustHeaderOnScroll = () => {
+    // get the current vertical scroll position of the webpage.
+    const scrollOffSet =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollOffSet > lastScrollTop) {
+      // scrolling down
+      document.querySelector(".site-header").style.transform =
+        "translateY(-100%)";
+    } else {
+      // scrolling up
+      document.querySelector(".site-header").style.transform = "translateY(0)";
+    }
+    lastScrollTop = scrollOffSet;
+  };
+
+  // Function to handle resize
+  const handleWindowResize = () => {
+    //
+    const isMobileView = window.innerWidth <= 992;
+
+    if (isMobileView) {
+      window.addEventListener("scroll", adjustHeaderOnScroll);
+    } else {
+      // If it's not mobile, remove scroll event listener and style
+      window.removeEventListener("scroll", adjustHeaderOnScroll);
+      document.querySelector(".site-header").style.transform = "translateY(0)";
+    }
+  };
+
+  handleWindowResize();
+
+  // Add event listener for window resize
+  window.addEventListener("resize", handleWindowResize);
+};

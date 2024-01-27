@@ -34,11 +34,12 @@ $text-size: 14px;
 // header section's styles
 .site-header {
   @include flex-style;
+  @include position(fixed, 0, $right: false, $left: true);
   background-color: $primary-bg-color;
   transition: background-color 0.4s, width 0.4s;
+  transition: transform 0.4s;
   width: 100%;
   height: 90px;
-  @include position(fixed, 0, $right: false, $left: true);
   z-index: 2;
   .mobile-menu-toggle {
     display: none;

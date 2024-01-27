@@ -13,6 +13,7 @@ import { toggleFAQ } from "./questions/questions.js";
 import { initSlider } from "./slider/slider.js";
 // import function related to terms and conditions in the footer
 import { termsAndConditions } from "./footer/terms.js";
+import { handleHeaderScroll } from "./header/header.js";
 
 // call functions in main js file
 window.onscroll = changeHeaderVisibility;
@@ -20,3 +21,4 @@ toggleFAQ();
 initSlider();
 handleMobileNavigation();
 termsAndConditions();
+handleHeaderScroll();
