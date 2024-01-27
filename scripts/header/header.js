@@ -52,13 +52,15 @@ export const handleMobileNavigation = () => {
 
 export const handleHeaderScroll = () => {
   let lastScrollTop = 0;
+  let scrollThreshold = 50;
+  // scrollThresHold
 
   const adjustHeaderOnScroll = () => {
     // get the current vertical scroll position of the webpage.
     const scrollOffSet =
       window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollOffSet > lastScrollTop) {
+    if (scrollOffSet > scrollThreshold && scrollOffSet > lastScrollTop) {
       // scrolling down
       document.querySelector(".site-header").style.transform =
         "translateY(-100%)";
